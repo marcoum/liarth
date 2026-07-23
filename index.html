@@ -9,7 +9,19 @@
   <meta name="keywords" content="limpeza urbana, coleta de lixo, varrição de ruas, capina, poda, resíduos sólidos, Nova Lima, Liarth" />
   <meta name="author" content="Liarth Limpeza Urbana Ltda" />
   <meta name="robots" content="index, follow" />
-  <meta name="theme-color" content="#173A1E" />
+  
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https: data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' 'unsafe-inline'; form-action 'self' https:" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+  <link rel="canonical" href="https://liarth.com.br/" />
+  <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-preview:-1" />
+  <meta property="og:image" content="https://liarth.com.br/assets/logo.webp" />
+  <meta property="og:image:width" content="400" />
+  <meta property="og:image:height" content="400" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Liarth Limpeza Urbana — Rota, coleta e destinação" />
+  <meta name="twitter:description" content="Serviços públicos de limpeza urbana em Nova Lima - MG desde 1999." />
+  <meta name="twitter:image" content="https://liarth.com.br/assets/logo.webp" />
+  <meta name="twitter:site" content="@liarth" />
 
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="pt_BR" />
@@ -20,18 +32,25 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;0,800;1,700;1,800&display=swap" rel="stylesheet" />
+  
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" as="style" onload="this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" /></noscript>
 
   <script type="application/ld+json">
+
     {
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "Liarth Limpeza Urbana Ltda",
-      "slogan": "Toda rua tem uma rota. Toda rota, um compromisso.",
-      "description": "Prestadora de serviços públicos de coleta domiciliar, varrição, capina, poda e destinação correta de resíduos em Nova Lima - MG, desde 1999.",
       "url": "https://liarth.com.br",
-      "email": "liarth@liarth.com.br",
-      "telephone": "+55 (31) 3694-3900",
+      "logo": "https://liarth.com.br/assets/logo.webp",
+      "contactPoint": [{
+        "@type": "ContactPoint",
+        "telephone": "+55-31-3694-3900",
+        "contactType": "customer service",
+        "areaServed": "BR",
+        "availableLanguage": ["Portuguese"]
+      }],
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "MG-030, 1456 - Vila Nova Suíça",
@@ -41,10 +60,48 @@
         "addressCountry": "BR"
       },
       "sameAs": ["https://www.instagram.com/liarth.limpezaurbana/"]
+    },
+    {
+      "@type": "WebSite",
+      "url": "https://liarth.com.br/",
+      "name": "Liarth Limpeza Urbana",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://liarth.com.br/?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Liarth Limpeza Urbana",
+      "image": "https://liarth.com.br/assets/logo.webp",
+      "telephone": "+55-31-3694-3900",
+      "priceRange": "$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "MG-030, 1456 - Vila Nova Suíça",
+        "addressLocality": "Nova Lima",
+        "addressRegion": "MG",
+        "postalCode": "34012-580",
+        "addressCountry": "BR"
+      },
+      "openingHoursSpecification": [{
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+        "opens": "07:00",
+        "closes": "18:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Saturday",
+        "opens": "08:00",
+        "closes": "14:00"
+      }]
     }
+  
   </script>
 
-  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/tailwind.min.js"></script>
   <script>
     tailwind.config = {
       theme: {
@@ -73,8 +130,13 @@
       --ink-soft: 90 90 86;
       --paper: 250 249 246;
       --paper-2: 240 238 231;
-      --green: 47 128 55;
+      --green: 47 158 55;
       --blue: 15 107 153;
+
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --radius-full: 9999px;
 
       color-scheme: light;
     }
@@ -110,16 +172,20 @@
       font-family: var(--font-sans); font-size: 0.72rem; font-weight: 700;
       letter-spacing: 0.06em; text-transform: uppercase;
       background: rgb(var(--paper));
+      border-radius: var(--radius-full);
     }
     .badge-green { border-color: rgb(var(--green)); color: rgb(var(--green)); }
+    .badge-blue { border-color: rgb(var(--blue)); color: rgb(var(--blue)); }
 
     /* ---------- buttons ---------- */
     .btn {
       display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
       font-family: var(--font-sans); font-weight: 600; font-size: 0.9rem;
-      padding: 0.8rem 1.5rem;
+      padding: calc(0.8rem - 2px) 1.5rem;
       white-space: nowrap; cursor: pointer; user-select: none;
+      border: 2px solid transparent;
       transition: transform .2s ease, background-color .2s ease, color .2s ease, box-shadow .2s ease;
+      border-radius: var(--radius-md);
     }
     .btn:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
     .btn:active { transform: translateY(0); }
@@ -136,17 +202,18 @@
     .btn-sm { padding: 0.5rem 1rem; font-size: 0.8rem; }
 
     /* ---------- cards ---------- */
-    .card { background: rgb(var(--paper-2)); transition: transform .25s ease, box-shadow .25s ease; }
+    .card { background: rgb(var(--paper-2)); transition: transform .25s ease, box-shadow .25s ease; border-radius: var(--radius-lg); }
     .card:hover { box-shadow: 0 12px 36px rgba(0,0,0,0.08); }
     .card-tilt { transition: transform 0.1s ease-out !important; }
 
-    .hairline { height: 2px; background: rgb(var(--ink)); border: 0; }
+    .hairline { height: 2px; background: rgb(var(--green)); border: 0; }
 
     .field-label { display: block; font-family: var(--font-sans); font-size: 0.72rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 0.5rem; color: rgb(var(--ink-soft)); }
     .field-control {
-      width: 100%; background: rgb(var(--paper)); border: 2px solid rgb(var(--ink));
+      width: 100%; background: rgb(var(--paper));
       color: rgb(var(--ink)); padding: 0.8rem 1rem; font-size: 0.95rem; font-family: var(--font-sans);
       transition: background-color .2s ease;
+      border-radius: var(--radius-sm);
     }
     .field-control::placeholder { color: rgb(var(--ink-soft)); opacity: .7; }
     .field-control:focus { outline: none; background: rgb(var(--paper-2)); }
@@ -183,37 +250,15 @@
     .card-tilt { transition: transform 0.15s ease-out; will-change: transform; }
 
     /* ---------- horizontal scroll ---------- */
-    .hscroll-wrap { overflow: hidden; }
-    .hscroll-inner { display: flex; gap: 2rem; }
-    .hscroll-inner > * { min-width: 280px; flex-shrink: 0; }
-    @media (min-width: 1024px) {
-      .hscroll-inner { padding-bottom: 2rem; }
-    }
-
-    /* ---------- route truck animation ---------- */
-    .schedule-truck {
-      position: absolute; left: 0; top: 50%; margin-top: -8px;
-      opacity: 0; z-index: 10;
-    }
-    @keyframes truckTrip {
-      0% { transform: translateX(0) scaleX(1); opacity: 0; }
-      8% { transform: translateX(0) scaleX(1); opacity: 1; }
-      48% { transform: translateX(var(--td,100px)) scaleX(1); opacity: 1; }
-      52% { transform: translateX(var(--td,100px)) scaleX(-1); opacity: 1; }
-      92% { transform: translateX(0) scaleX(-1); opacity: 1; }
-      96% { transform: translateX(0) scaleX(1); opacity: 1; }
-      100% { transform: translateX(0) scaleX(1); opacity: 0; }
-    }
-    .group:hover .schedule-truck { animation: truckTrip 2.5s ease-in-out infinite; }
-    .group:hover .schedule-truck svg { display: block; }
+    .timeline-list { display: flex; flex-direction: column; gap: 1rem; }
 
     .odometer { font-family: var(--font-sans); font-variant-numeric: tabular-nums; }
 
     ::-webkit-scrollbar { width: 8px; }
     ::-webkit-scrollbar-track { background: transparent; }
-    ::-webkit-scrollbar-thumb { background: rgb(var(--blue)); border-radius: 0; }
-    ::-webkit-scrollbar-thumb:hover { background: rgb(var(--blue) / 0.8); }
-    html { scrollbar-color: rgb(var(--blue)) transparent; scrollbar-width: thin; }
+    ::-webkit-scrollbar-thumb { background: rgb(var(--green)); border-radius: var(--radius-full); }
+    ::-webkit-scrollbar-thumb:hover { background: rgb(var(--green) / 0.8); }
+    html { scrollbar-color: rgb(var(--green)) transparent; scrollbar-width: thin; }
 
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
@@ -227,11 +272,11 @@
 
   <!-- ======== HEADER ======== -->
   <header id="siteHeader" class="sticky top-0 z-50">
-    <div id="headerInner" class="border-b-2 border-ink/10 bg-paper/95 backdrop-blur-md">
+    <div id="headerInner" class="border-b border-gray-200/10 bg-paper/95 backdrop-blur-md">
       <div class="container-app flex h-16 items-center justify-between gap-4 lg:h-[4.25rem]">
         <a href="#inicio" aria-label="Liarth Limpeza Urbana" class="flex shrink-0 items-center gap-2.5">
-          <span class="grid h-10 w-10 place-items-center overflow-hidden bg-paper">
-            <img src="image.png" alt="" width="40" height="40" class="h-full w-full object-cover" loading="lazy" />
+          <span class="grid h-10 w-10 place-items-center overflow-hidden rounded-lg">
+            <img src="assets/logo.webp" alt="" width="40" height="40" class="h-full w-full object-cover" loading="lazy" />
           </span>
           <span class="hidden flex-col leading-none sm:flex">
             <span class="font-display text-xl font-bold tracking-tight text-ink">LIARTH</span>
@@ -242,10 +287,9 @@
         <nav id="navDesktop" class="hidden items-center gap-1 lg:flex" aria-label="Principal"></nav>
 
         <div class="flex items-center gap-2">
-          <a id="headerPhone" href="tel:3136943900" class="hidden items-center gap-2 code-tag text-ink transition-colors hover:text-green lg:flex">(31) 3694-3900</a>
-          <a href="#contato" class="btn btn-green btn-sm hidden sm:inline-flex">Solicitar Atendimento</a>
-          <button type="button" onclick="toggleMobileMenu()" aria-label="Abrir menu" aria-expanded="false" id="menuToggle" class="grid h-10 w-10 place-items-center border-2 border-ink bg-paper text-ink lg:hidden">
-            <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h16"/></svg>
+          <a href="tel:3136943900" class="btn btn-green btn-sm hidden sm:inline-flex">Solicitar Atendimento</a>
+          <button type="button" onclick="toggleMobileMenu()" aria-label="Abrir menu" aria-expanded="false" id="menuToggle" class="grid h-10 w-10 place-items-center border border-gray-300 bg-paper text-ink lg:hidden rounded-lg">
+            <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 448 512" fill="currentColor"><path d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/></svg>
           </button>
         </div>
       </div>
@@ -259,36 +303,34 @@
   <main>
 
     <!-- ===== HERO ===== -->
-    <section id="inicio" class="relative h-screen min-h-[600px] flex items-center overflow-hidden bg-ink">
+    <section id="inicio" class="relative h-screen min-h-[600px] flex items-center overflow-hidden bg-ink mt-[-70px]">
       <div class="parallax" id="heroParallax">
-        <img src="https://radiotropical.net/wp-content/uploads/2024/06/g_185_2_5_28062024104612-e1719600561210.jpg" alt="Equipe da Liarth em operação" fetchpriority="high" />
+        <img src="assets/g_185_2_5_28062024104612-e1719600561210.webp" alt="Equipe da Liarth em operação" fetchpriority="high" />
       </div>
       <div class="absolute inset-0" style="background:linear-gradient(135deg, rgba(20,20,22,0.82) 0%, rgba(20,20,22,0.25) 60%, rgba(20,20,22,0.05) 100%)"></div>
       <div class="absolute inset-0 opacity-[0.03]" style="background-image:radial-gradient(circle, rgb(255,255,255) 1px, transparent 1px); background-size:32px 32px"></div>
       <div class="container-app relative w-full">
-        <div class="max-w-2xl">
-          <div class="reveal">
-            <span class="inline-flex items-center gap-2 font-sans text-[0.6rem] font-bold tracking-[0.18em] text-paper/50 uppercase border border-paper/15 bg-paper/[0.03] px-3 py-1.5">OS Nº 04178 · LIMPEZA URBANA</span>
-          </div>
+        <div class="max-w-2xl lg:mx-auto lg:text-center">
+          
           <div class="reveal mt-8" style="transition-delay:80ms">
-            <h1 class="font-display text-5xl font-extrabold leading-[1.05] text-paper sm:text-6xl lg:text-7xl">
-              <span class="hero-word">Rua</span> <span class="hero-word">tem</span><br>
-              <span class="hero-word text-green">rota.</span>
+            <h1 class="font-display text-4xl font-extrabold leading-[1.05] text-paper sm:text-6xl lg:text-7xl">
+              <span class="hero-word">Cidade</span> <span class="hero-word">limpa</span> <span class="hero-word">é</span><br>
+              <span class="hero-word text-green">responsabilidade</span>
             </h1>
-            <h1 class="font-display text-5xl font-extrabold leading-[1.05] text-paper sm:text-6xl lg:text-7xl -mt-2">
-              <span class="hero-word">Cidade</span> <span class="hero-word">tem</span><br>
-              <span class="hero-word text-green">compromisso.</span>
+            <h1 class="font-display text-4xl font-extrabold leading-[1.05] text-paper sm:text-6xl lg:text-7xl -mt-2">
+              <span class="hero-word">de</span> <span class="hero-word text-green">todos!</span>
             </h1>
           </div>
-          <div class="reveal mt-6 w-16 h-[2px] bg-green/60" style="transition-delay:300ms"></div>
-          <div class="reveal mt-6 max-w-md" style="transition-delay:160ms">
+          <div class="reveal mt-6 w-16 h-[2px] bg-green/60 lg:mx-auto" style="transition-delay:300ms"></div>
+          <div class="reveal mt-6 max-w-md lg:mx-auto" style="transition-delay:160ms">
             <p class="text-base leading-relaxed text-paper/60">Desde 1999 a Liarth executa a coleta, a varrição e a destinação correta de resíduos que mantêm Nova Lima limpa — bairro por bairro, todos os dias.</p>
           </div>
-          <div class="reveal mt-8 flex flex-col gap-3 sm:flex-row" style="transition-delay:240ms">
+          <div class="reveal mt-8 flex flex-col gap-3 sm:flex-row lg:justify-center" style="transition-delay:240ms">
             <a href="#servicos" class="btn btn-green">Ver Serviços</a>
             <a href="#contato" class="btn btn-outline-paper">Solicitar Atendimento</a>
           </div>
-          <div class="reveal mt-12 hidden lg:flex items-center gap-8" style="transition-delay:360ms">
+          
+          <div class="reveal mt-12 hidden lg:flex items-center gap-8 lg:justify-center" style="transition-delay:360ms">
             <div>
               <p class="font-display text-2xl font-bold text-paper">26</p>
               <p class="font-sans text-[0.6rem] font-bold tracking-[0.15em] text-paper/40 uppercase">Anos</p>
@@ -304,6 +346,7 @@
               <p class="font-sans text-[0.6rem] font-bold tracking-[0.15em] text-paper/40 uppercase">Bairros</p>
             </div>
           </div>
+          
         </div>
       </div>
       <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 z-10">
@@ -358,7 +401,7 @@
     <!-- ===== PARALLAX STATS ===== -->
     <section id="numeros" class="relative overflow-hidden py-28 sm:py-32">
       <div class="parallax">
-        <img src="https://www.portalaraxa.com.br/wp-content/uploads/2018/03/f_caminh%C3%B5es_coletadelixo-12.jpg" alt="Caminhão de coleta" loading="lazy" />
+        <img src="assets/f_caminh%C3%B5es_coletadelixo-12.webp" alt="Caminhão de coleta" loading="lazy" />
       </div>
       <div class="absolute inset-0" style="background:linear-gradient(180deg, rgba(20,20,22,0.88) 0%, rgba(20,20,22,0.75) 100%)"></div>
       <div class="container-app relative">
@@ -376,7 +419,8 @@
         <div class="grid gap-14 lg:grid-cols-[1fr_1.3fr] lg:gap-20">
           <div class="reveal lg:sticky lg:top-28 lg:self-start">
             <span class="eyebrow text-blue">Diferenciais</span>
-            <h2 class="mt-3 font-display text-4xl font-bold leading-none text-ink sm:text-5xl">O que está no contrato — e o que cumprimos</h2>
+            <h2 class="mt-3 font-display text-4xl font-bold leading-none text-ink sm:text-5xl">O que está no contrato</h2>
+            <h3 class="mt-3 font-display text-4xl font-bold leading-none text-ink sm:text-5xl">e os estregáveis</h3>
             <p class="mt-4 text-base leading-relaxed text-ink-soft">26 anos de operação pública deixam claro o que separa uma rota cumprida de uma rota apenas prometida.</p>
             <a href="#contato" class="btn btn-blue mt-8">Falar com a Liarth</a>
           </div>
@@ -427,18 +471,20 @@
           <span class="eyebrow text-green">Dúvidas</span>
           <h2 class="mt-3 font-display text-4xl font-bold leading-none text-ink sm:text-5xl">Perguntas mais comuns</h2>
           <p class="mt-4 text-base leading-relaxed text-ink-soft">Ainda tem dúvidas? Fale com a nossa equipe.</p>
-          <a href="#contato" class="btn btn-blue mt-8">Entrar em Contato</a>
+          <a href="#contato" class="btn btn-green mt-8">Entrar em Contato</a>
         </div>
         <div id="faqList" class="flex flex-col gap-2"></div>
       </div>
     </section>
 
     <!-- ===== CTA ===== -->
-    <section class="bg-green py-24 sm:py-28 lg:py-32">
-      <div class="container-app text-center text-paper">
-        <span class="inline-flex items-center gap-2 border border-paper/20 bg-paper/5 px-4 py-1.5 font-sans text-[0.65rem] font-bold tracking-[0.15em] text-paper/70 uppercase">MANIFESTO Nº 04178</span>
+    <section class="bg-green py-24 sm:py-28 lg:py-32 relative overflow-hidden">
+      <div class="absolute inset-0 opacity-40 lg:hidden" style="background-image:url('assets/regioes.webp');background-position: 40% center;background-size: auto 100%;background-repeat:no-repeat"></div>
+      <div class="absolute inset-0 opacity-40 hidden lg:block" style="background-image:url('assets/regioes.webp');background-position: 160% center;background-size: 120%;background-repeat:no-repeat"></div>
+      <div class="container-app text-center text-paper relative z-10">
+        <span class="inline-flex items-center gap-2 border border-paper/20 bg-paper/5 px-4 py-1.5 font-sans text-[0.65rem] font-bold tracking-[0.15em] text-paper uppercase rounded-full">MANIFESTO Nº 04178</span>
         <h2 class="mx-auto mt-6 max-w-3xl font-display text-4xl font-bold leading-[0.95] sm:text-6xl">Toda cidade limpa começou com uma rota cumprida</h2>
-        <p class="mx-auto mt-5 max-w-xl text-paper/80 sm:text-lg">Fale com a Liarth e leve o mesmo padrão de operação para o seu bairro ou município.</p>
+        <p class="mx-auto mt-5 max-w-xl text-paper sm:text-lg">Fale com a Liarth e leve o mesmo padrão de operação para o seu bairro ou município.</p>
         <div class="mt-10 flex flex-col justify-center gap-3 sm:flex-row">
           <a href="tel:3136943900" class="btn btn-ink">Ligar para (31) 3694-3900</a>
           <a href="mailto:liarth@liarth.com.br" class="btn btn-outline-paper">Enviar E-mail</a>
@@ -467,7 +513,7 @@
           <div class="reveal" style="transition-delay:100ms">
             <div class="card p-6 sm:p-8">
               <div id="formSuccess" class="hidden flex min-h-[400px] flex-col items-center justify-center text-center">
-                <span class="grid h-14 w-14 place-items-center border-2 border-green text-green">
+                <span class="grid h-14 w-14 place-items-center border-2 border-green text-green rounded-full">
                   <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg>
                 </span>
                 <h3 class="mt-5 text-xl font-bold text-ink">Ordem de serviço enviada</h3>
@@ -478,7 +524,6 @@
               <form id="contactForm" class="grid gap-5">
                 <div class="flex items-center justify-between code-tag text-ink-soft">
                   <span>ORDEM DE SERVIÇO</span>
-                  <span id="formCodeStamp"></span>
                 </div>
                 <div class="hairline"></div>
                 <div class="grid gap-5 sm:grid-cols-2">
@@ -510,13 +555,13 @@
                 </div>
                 <div class="flex flex-col">
                   <label for="message" class="field-label">Descrição</label>
-                  <textarea id="message" name="message" placeholder="Descreva sua solicitação ou dúvida..." required class="field-control"></textarea>
+                  <textarea id="message" name="message" placeholder="Descreva sua solicitação ou dúvida..." required class="field-control max-h-200"></textarea>
                 </div>
                 <label class="flex items-start gap-3 text-sm normal-case text-ink-soft">
                   <input type="checkbox" required class="mt-0.5 h-4 w-4" style="accent-color:rgb(var(--green))" />
                   <span>Concordo com a política de privacidade.</span>
                 </label>
-                <button type="submit" class="btn btn-ink w-full">Enviar Solicitação</button>
+                <button type="submit" class="btn btn-green w-full">Enviar Solicitação</button>
                 <p class="text-center text-xs normal-case text-ink-soft">Atendimento de segunda a sábado.</p>
               </form>
             </div>
@@ -533,8 +578,8 @@
       <div class="grid gap-12 lg:grid-cols-[1.4fr_repeat(3,1fr)]">
         <div class="max-w-sm">
           <div class="flex items-center gap-2.5">
-<span class="grid h-10 w-10 place-items-center overflow-hidden">
-            <img src="image.png" alt="" width="40" height="40" class="h-full w-full object-contain" loading="lazy" />
+<span class="grid h-10 w-10 place-items-center overflow-hidden rounded-lg">
+            <img src="assets/logo.webp" alt="" width="40" height="40" class="h-full w-full object-contain" loading="lazy" />
           </span>
           <span class="font-display text-xl font-bold tracking-tight text-paper">LIARTH</span>
           </div>
@@ -548,44 +593,41 @@
       <hr class="my-10 border-paper/15" />
 
       <div class="flex flex-col items-center justify-between gap-4 text-center sm:flex-row sm:text-left">
-        <p class="code-tag text-paper/35">© <span id="footerYear"></span> LIARTH LIMPEZA URBANA LTDA · CNPJ 14.808.488/0001-92</p>
+        <p class="code-tag text-paper/50">© <span id="footerYear"></span> LIARTH LIMPEZA URBANA LTDA · CNPJ 14.808.488/0001-92</p>
       </div>
       <p class="mt-4 text-center text-xs text-paper/45 sm:mt-6">
-        Uma experiência digital por <a href="https://marcoumweb.com" target="_blank" rel="noopener noreferrer" class="font-serif italic transition-colors hover:text-red-400"><span class="text-paper">Marco</span> <span class="text-red-500">Um</span></a>
+        Desenvolvido por <a href="https://marcoumweb.com" target="_blank" rel="noopener noreferrer" class="font-serif italic transition-colors hover:text-red-400"><span class="text-paper">Marco</span> <span class="text-red-500">Um</span></a>
       </p>
     </div>
   </footer>
 
-  <a href="https://wa.me/553136943900" target="_blank" rel="noopener noreferrer" aria-label="Falar no WhatsApp" class="fixed bottom-5 left-5 z-50 grid h-14 w-14 place-items-center border-2 border-ink bg-green text-paper shadow-[0_14px_32px_-8px_rgba(0,0,0,0.35)] transition-transform hover:scale-105">
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 11.5a8.5 8.5 0 0 1-12.5 7.5L3 21l2-5.5A8.5 8.5 0 1 1 21 11.5Z"/></svg>
-  </a>
-
   <script>
     var I = {};
-    function ri(n,p){ I[n]=p; }
-    function icn(n,s,sw){ return '<svg xmlns="http://www.w3.org/2000/svg" width="'+(s||22)+'" height="'+(s||22)+'" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="'+(sw||1.75)+'" stroke-linecap="round" stroke-linejoin="round" class="shrink-0">'+(I[n]||'')+'</svg>'; }
+    function ri(n,p,v){ I[n]={p:p,v:v||"0 0 24 24"}; }
+    function icn(n,s,sw){ var x=I[n]||{},vb=x.v||"0 0 24 24"; return '<svg xmlns="http://www.w3.org/2000/svg" width="'+(s||22)+'" height="'+(s||22)+'" viewBox="'+vb+'" fill="currentColor" class="shrink-0">'+(x.p||'')+'</svg>'; }
 
-    ri("truck",'<path d="M3 17h2"/><path d="M9 17H5V7a1 1 0 0 1 1-1h7v11h-2"/><path d="M14 10h4l3 3v4h-2"/><circle cx="7.5" cy="17.5" r="1.8"/><circle cx="17.5" cy="17.5" r="1.8"/>');
-    ri("broom",'<path d="m3 21 5-5"/><path d="M13 6 6 13a3 3 0 0 0 0 4.2A3 3 0 0 0 10.2 17l7-7"/><path d="M18 4c1.5 1.5 1 4-.5 5.5"/><path d="M15 3c1.7.4 3 2 3 3.8"/>');
-    ri("trees",'<path d="M10 10v.2A3 3 0 0 1 8.9 16H5a3 3 0 0 1-1-5.8V10a3 3 0 1 1 6 0Z"/><path d="M7 16v6"/><path d="M13 19v3"/><path d="M12 19h8.3a1 1 0 0 0 .7-1.7L18 14h.3a1 1 0 0 0 .7-1.7L16 9h.2a1 1 0 0 0 .8-1.7L13 3l-1.4 1.5"/>');
-    ri("scissors",'<circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4 8.12 15.88"/><path d="M14.47 14.48 20 20"/><path d="M8.12 8.12 12 12"/>');
-    ri("recycle",'<path d="M7 19H4.815a1.83 1.83 0 0 1-1.57-.881 1.785 1.785 0 0 1-.004-1.784L7.196 9.5"/><path d="M11 19h8.203a1.83 1.83 0 0 0 1.556-.89 1.784 1.784 0 0 0 0-1.775l-1.226-2.12"/><path d="m14 16-3 3 3 3"/><path d="M8.293 13.596 4.851 9.5l3.442-4.096"/><path d="M9 5.5 12 5.5"/><path d="m16.293 5.596 3.442 4.096-3.442 4.096"/>');
-    ri("check-circle",'<circle cx="12" cy="12" r="9"/><path d="m8.5 12 2.5 2.5 4.5-5"/>');
-    ri("x",'<path d="M18 6 6 18"/><path d="m6 6 12 12"/>');
-    ri("plus",'<path d="M12 5v14"/><path d="M5 12h14"/>');
-    ri("minus",'<path d="M5 12h14"/>');
-    ri("phone",'<path d="M5 4h3l2 5-2 1a12 12 0 0 0 5 5l1-2 5 2v3a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/>');
-    ri("mail",'<rect x="3" y="5" width="18" height="14" rx="1"/><path d="m3 7 9 6 9-6"/>');
-    ri("map-pin",'<path d="M12 21s7-6 7-11a7 7 0 1 0-14 0c0 5 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/>');
-    ri("clock",'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>');
-    ri("message-circle",'<path d="M21 11.5a8.5 8.5 0 0 1-12.5 7.5L3 21l2-5.5A8.5 8.5 0 1 1 21 11.5Z"/>');
-    ri("instagram",'<rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.1" fill="currentColor" stroke="none"/>');
-    ri("quote",'<path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1 1 1 0 0 0 1 1 4 4 0 0 0 4-4V5a2 2 0 0 0-2-2Z"/><path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1 1 1 0 0 0 1 1 4 4 0 0 0 4-4V5a2 2 0 0 0-2-2Z"/>');
-    ri("route",'<circle cx="6" cy="19" r="2"/><circle cx="18" cy="5" r="2"/><path d="M12 19H8.5a2.5 2.5 0 0 1 0-5h7a2.5 2.5 0 0 0 0-5H6"/>');
-    ri("shield",'<path d="M12 3 5 6v5c0 4.5 3 7.5 7 9 4-1.5 7-4.5 7-9V6l-7-3Z"/><path d="m9 12 2 2 4-4"/>');
-    ri("gauge",'<path d="M12 15 16.24 6.5"/><circle cx="12" cy="15" r="1.3" fill="currentColor" stroke="none"/><path d="M3.05 19a9 9 0 1 1 17.9 0Z"/>');
-    ri("leaf",'<path d="M11 20A7 7 0 0 1 4 13c0-6 6-9 15-9 0 9-3 15-9 16Z"/><path d="M4 20c4-2 8-6 11-11"/>');
-    ri("menu",'<path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h16"/>');
+    ri("menu",'<!--!Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/>',"0 0 448 512");
+    ri("broom",'<!--!Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M566.6 54.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192-34.7-34.7c-4.2-4.2-10-6.6-16-6.6-12.5 0-22.6 10.1-22.6 22.6l0 29.1 108.3 108.3 29.1 0c12.5 0 22.6-10.1 22.6-22.6 0-6-2.4-11.8-6.6-16l-34.7-34.7 192-192zM341.1 353.4L222.6 234.9c-42.7-3.7-85.2 11.7-115.8 42.3l-8 8c-22.3 22.3-34.8 52.5-34.8 84 0 6.8 7.1 11.2 13.2 8.2l51.1-25.5c5-2.5 9.5 4.1 5.4 7.9L7.3 473.4C2.7 477.6 0 483.6 0 489.9 0 502.1 9.9 512 22.1 512l173.3 0c38.8 0 75.9-15.4 103.4-42.8 30.6-30.6 45.9-73.1 42.3-115.8z"/>',"0 0 576 512");
+    ri("check-circle",'<!--!Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M256 512a256 256 0 1 1 0-512 256 256 0 1 1 0 512zM374 145.7c-10.7-7.8-25.7-5.4-33.5 5.3L221.1 315.2 169 263.1c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l72 72c5 5 11.8 7.5 18.8 7s13.4-4.1 17.5-9.8L379.3 179.2c7.8-10.7 5.4-25.7-5.3-33.5z"/>',"0 0 512 512");
+    ri("mail",'<!--!Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M48 64c-26.5 0-48 21.5-48 48 0 15.1 7.1 29.3 19.2 38.4l208 156c17.1 12.8 40.5 12.8 57.6 0l208-156c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48L48 64zM0 196L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-188-198.4 148.8c-34.1 25.6-81.1 25.6-115.2 0L0 196z"/>',"0 0 512 512");
+    ri("gauge",'<!--!Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M0 256a256 256 0 1 1 512 0 256 256 0 1 1 -512 0zm320 96c0-16.2-6-31.1-16-42.3l69.5-138.9c5.9-11.9 1.1-26.3-10.7-32.2s-26.3-1.1-32.2 10.7L261.1 288.2c-1.7-.1-3.4-.2-5.1-.2-35.3 0-64 28.7-64 64s28.7 64 64 64 64-28.7 64-64z"/>',"0 0 512 512");
+    ri("instagram",'<!--!Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M224.3 141a115 115 0 1 0 -.6 230 115 115 0 1 0 .6-230zm-.6 40.4a74.6 74.6 0 1 1 .6 149.2 74.6 74.6 0 1 1 -.6-149.2zm93.4-45.1a26.8 26.8 0 1 1 53.6 0 26.8 26.8 0 1 1 -53.6 0zm129.7 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM399 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/>',"0 0 448 512");
+    ri("leaf",'<!--!Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M471.3 6.7C477.7 .6 487-1.6 495.6 1.2 505.4 4.5 512 13.7 512 24l0 186.9c0 131.2-108.1 237.1-238.8 237.1-77 0-143.4-49.5-167.5-118.7-35.4 30.8-57.7 76.1-57.7 126.7 0 13.3-10.7 24-24 24S0 469.3 0 456C0 381.1 38.2 315.1 96.1 276.3 131.4 252.7 173.5 240 216 240l80 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-80 0c-39.7 0-77.3 8.8-111 24.5 23.3-70 89.2-120.5 167-120.5 66.4 0 115.8-22.1 148.7-44 19.2-12.8 35.5-28.1 50.7-45.3z"/>',"0 0 512 512");
+    ri("map-pin",'<!--!Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M192 284.4C256.1 269.9 304 212.5 304 144 304 64.5 239.5 0 160 0S16 64.5 16 144c0 68.5 47.9 125.9 112 140.4L128 480c0 17.7 14.3 32 32 32s32-14.3 32-32l0-195.6zM168 96c-30.9 0-56 25.1-56 56 0 13.3-10.7 24-24 24s-24-10.7-24-24c0-57.4 46.6-104 104-104 13.3 0 24 10.7 24 24s-10.7 24-24 24z"/>',"0 0 320 512");
+    ri("minus",'<!--!Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32z"/>',"0 0 448 512");
+    ri("phone",'<!--!Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M160.2 25C152.3 6.1 131.7-3.9 112.1 1.4l-5.5 1.5c-64.6 17.6-119.8 80.2-103.7 156.4 37.1 175 174.8 312.7 349.8 349.8 76.3 16.2 138.8-39.1 156.4-103.7l1.5-5.5c5.4-19.7-4.7-40.3-23.5-48.1l-97.3-40.5c-16.5-6.9-35.6-2.1-47 11.8l-38.6 47.2C233.9 335.4 177.3 277 144.8 205.3L189 169.3c13.9-11.3 18.6-30.4 11.8-47L160.2 25z"/>',"0 0 512 512");
+    ri("plus",'<!--!Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M256 64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 160-160 0c-17.7 0-32 14.3-32 32s14.3 32 32 32l160 0 0 160c0 17.7 14.3 32 32 32s32-14.3 32-32l0-160 160 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-160 0 0-160z"/>',"0 0 448 512");
+    ri("quote",'<!--!Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M0 216C0 149.7 53.7 96 120 96l8 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-8 0c-30.9 0-56 25.1-56 56l0 8 64 0c35.3 0 64 28.7 64 64l0 64c0 35.3-28.7 64-64 64l-64 0c-35.3 0-64-28.7-64-64L0 216zm256 0c0-66.3 53.7-120 120-120l8 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-8 0c-30.9 0-56 25.1-56 56l0 8 64 0c35.3 0 64 28.7 64 64l0 64c0 35.3-28.7 64-64 64l-64 0c-35.3 0-64-28.7-64-64l0-136z"/>',"0 0 448 512");
+    ri("recycle",'<!--!Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M152.3 60C198.5-20 314-20 360.2 60l37.3 64.6 27.7-16c8.4-4.9 18.9-4.2 26.6 1.7s11.1 15.9 8.6 25.3L436.9 223c-3.4 12.8-16.6 20.4-29.4 17l-87.4-23.4c-9.4-2.5-16.3-10.4-17.6-20s3.4-19.1 11.8-23.9l27.7-16-37.3-64.6c-21.6-37.3-75.4-37.3-97 0l-5.3 9.1c-8.8 15.3-28.4 20.5-43.7 11.7S138.2 84.5 147 69.1l5.3-9.1zM449.7 279.1c15.3-8.8 34.9-3.6 43.7 11.7l5.3 9.1c46.2 80-11.5 180-103.9 180l-74.6 0 0 32c0 9.7-5.8 18.5-14.8 22.2s-19.3 1.7-26.2-5.2l-64-64c-9.4-9.4-9.4-24.6 0-33.9l64-64c6.9-6.9 17.2-8.9 26.2-5.2s14.8 12.5 14.8 22.2l0 32 74.6 0c43.1 0 70.1-46.7 48.5-84l-5.3-9.1c-8.8-15.3-3.6-34.9 11.7-43.7zM51 235.4l-27.7-16c-8.4-4.9-13.1-14.3-11.8-23.9s8.2-17.5 17.6-20L116.5 152c12.8-3.4 26 4.2 29.4 17l23.4 87.4c2.5 9.4-.9 19.3-8.6 25.3s-18.2 6.6-26.6 1.7l-27.7-16-37.3 64.6c-21.6 37.3 5.4 84 48.5 84l10.6 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-10.6 0C25.3 480-32.4 380 13.8 300L51 235.4z"/>',"0 0 512 512");
+    ri("route",'<!--!Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M512 96c0 50.2-59.1 125.1-84.6 155-3.8 4.4-9.4 6.1-14.5 5L320 256c-17.7 0-32 14.3-32 32s14.3 32 32 32l96 0c53 0 96 43 96 96s-43 96-96 96l-276.4 0c8.7-9.9 19.3-22.6 30-36.8 6.3-8.4 12.8-17.6 19-27.2L416 448c17.7 0 32-14.3 32-32s-14.3-32-32-32l-96 0c-53 0-96-43-96-96s43-96 96-96l39.8 0c-21-31.5-39.8-67.7-39.8-96 0-53 43-96 96-96s96 43 96 96zM117.1 489.1c-3.8 4.3-7.2 8.1-10.1 11.3l-1.8 2-.2-.2c-6 4.6-14.6 4-20-1.8-25.2-27.4-85-97.9-85-148.4 0-53 43-96 96-96s96 43 96 96c0 30-21.1 67-43.5 97.9-10.7 14.7-21.7 28-30.8 38.5l-.6 .7zM128 352a32 32 0 1 0 -64 0 32 32 0 1 0 64 0zM416 128a32 32 0 1 0 0-64 32 32 0 1 0 0 64z"/>',"0 0 512 512");
+    ri("scissors",'<!--!Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M192 256l-39.5 39.5c-12.6-4.9-26.2-7.5-40.5-7.5-61.9 0-112 50.1-112 112s50.1 112 112 112 112-50.1 112-112c0-14.3-2.7-27.9-7.5-40.5L499.2 76.8c7.1-7.1 7.1-18.5 0-25.6-28.3-28.3-74.1-28.3-102.4 0L256 192 216.5 152.5c4.9-12.6 7.5-26.2 7.5-40.5 0-61.9-50.1-112-112-112S0 50.1 0 112 50.1 224 112 224c14.3 0 27.9-2.7 40.5-7.5L192 256zm97.9 97.9L396.8 460.8c28.3 28.3 74.1 28.3 102.4 0 7.1-7.1 7.1-18.5 0-25.6l-145.3-145.3-64 64zM64 112a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm48 240a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"/>',"0 0 512 512");
+    ri("shield",'<!--!Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M256 0c4.6 0 9.2 1 13.4 2.9L457.8 82.8c22 9.3 38.4 31 38.3 57.2-.5 99.2-41.3 280.7-213.6 363.2-16.7 8-36.1 8-52.8 0-172.4-82.5-213.1-264-213.6-363.2-.1-26.2 16.3-47.9 38.3-57.2L242.7 2.9C246.9 1 251.4 0 256 0z"/>',"0 0 512 512");
+    ri("tree",'<!--!Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M224-32c7 0 13.7 3.1 18.3 8.5l136 160c6.1 7.1 7.4 17.1 3.5 25.6S369.4 176 360 176l-24.9 0 75.2 88.5c6.1 7.1 7.4 17.1 3.5 25.6S401.4 304 392 304l-38.5 0 88.8 104.5c6.1 7.1 7.4 17.1 3.5 25.6S433.4 448 424 448l-168 0 0 64c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-64-168 0c-9.4 0-17.9-5.4-21.8-13.9s-2.6-18.5 3.5-25.6L94.5 304 56 304c-9.4 0-17.9-5.4-21.8-13.9s-2.6-18.5 3.5-25.6L112.9 176 88 176c-9.4 0-17.9-5.4-21.8-13.9s-2.6-18.5 3.5-25.6l136-160C210.3-28.9 217-32 224-32z"/>',"0 -25 448 572");
+    ri("truck",'<!--!Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M0 96C0 60.7 28.7 32 64 32l288 0c35.3 0 64 28.7 64 64l0 32 50.7 0c17 0 33.3 6.7 45.3 18.7L557.3 192c12 12 18.7 28.3 18.7 45.3L576 384c0 35.3-28.7 64-64 64l-3.3 0c-10.4 36.9-44.4 64-84.7 64s-74.2-27.1-84.7-64l-102.6 0c-10.4 36.9-44.4 64-84.7 64s-74.2-27.1-84.7-64L64 448c-35.3 0-64-28.7-64-64L0 96zM512 288l0-50.7-45.3-45.3-50.7 0 0 96 96 0zM192 424a40 40 0 1 0 -80 0 40 40 0 1 0 80 0zm232 40a40 40 0 1 0 0-80 40 40 0 1 0 0 80z"/>',"0 0 576 512");
+    ri("whatsapp",'<!--!Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M380.9 97.1c-41.9-42-97.7-65.1-157-65.1-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480 117.7 449.1c32.4 17.7 68.9 27 106.1 27l.1 0c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3 18.6-68.1-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1s56.2 81.2 56.1 130.5c0 101.8-84.9 184.6-186.6 184.6zM325.1 300.5c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8s-14.3 18-17.6 21.8c-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7s-12.5-30.1-17.1-41.2c-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2s-9.7 1.4-14.8 6.9c-5.1 5.6-19.4 19-19.4 46.3s19.9 53.7 22.6 57.4c2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4s4.6-24.1 3.2-26.4c-1.3-2.5-5-3.9-10.5-6.6z"/>',"0 0 448 512");
+    ri("x",'<!--!Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M376.6 84.5c11.3-13.6 9.5-33.8-4.1-45.1s-33.8-9.5-45.1 4.1L192 206 56.6 43.5C45.3 29.9 25.1 28.1 11.5 39.4S-3.9 70.9 7.4 84.5L150.3 256 7.4 427.5c-11.3 13.6-9.5 33.8 4.1 45.1s33.8 9.5 45.1-4.1L192 306 327.4 468.5c11.3 13.6 31.5 15.4 45.1 4.1s15.4-31.5 4.1-45.1L233.7 256 376.6 84.5z"/>',"0 0 384 512");
+    ri("clock",'<!--!Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M256 0a256 256 0 1 1 0 512 256 256 0 1 1 0-512zM232 120l0 136c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2 280 120c0-13.3-10.7-24-24-24s-24 10.7-24 24z"/>',"0 0 512 512");
+
 
     var site = {
       nav: [
@@ -614,12 +656,12 @@
         { bairro: "Estância", servico: "Capina e roçada", dias: "Quinzenal", horario: "06:00" }
       ],
       services: [
-        { icon:"truck", code:"OS-01", title:"Coleta Domiciliar", description:"Recolhimento periódico de resíduos residenciais, seguindo rota fixa por bairro e horário publicado no painel de rotas." },
-        { icon:"broom", code:"OS-02", title:"Varrição de Vias e Logradouros", description:"Varrição manual e mecanizada de ruas, calçadas e sarjetas, com remoção de folhas e resíduos soltos." },
-        { icon:"trees", code:"OS-03", title:"Limpeza de Praças e Parques", description:"Manutenção contínua de áreas verdes e espaços de convivência, mantendo-os limpos e seguros para uso público." },
-        { icon:"scissors", code:"OS-04", title:"Capina e Roçada", description:"Controle de mato e vegetação em terrenos públicos, canteiros e margens de via, conforme cronograma sazonal." },
-        { icon:"leaf", code:"OS-05", title:"Poda e Manejo de Árvores", description:"Poda técnica de árvores em espaços públicos, com foco em segurança viária e preservação da arborização urbana." },
-        { icon:"recycle", code:"OS-06", title:"Destinação Final de Resíduos", description:"Triagem, transporte e encaminhamento de resíduos não perigosos a locais licenciados, conforme CNAE 3811-4/00." }
+        { icon:"truck", title:"Coleta Domiciliar", description:"Recolhimento periódico de resíduos residenciais, seguindo rota fixa por bairro e horário publicado no painel de rotas." },
+        { icon:"broom", title:"Varrição de Vias e Logradouros", description:"Varrição manual e mecanizada de ruas, calçadas e sarjetas, com remoção de folhas e resíduos soltos." },
+        { icon:"tree", title:"Limpeza de Praças e Parques", description:"Manutenção contínua de áreas verdes e espaços de convivência, mantendo-os limpos e seguros para uso público." },
+        { icon:"scissors", title:"Capina e Roçada", description:"Controle de mato e vegetação em terrenos públicos, canteiros e margens de via, conforme cronograma sazonal." },
+        { icon:"leaf", title:"Poda e Manejo de Árvores", description:"Poda técnica de árvores em espaços públicos, com foco em segurança viária e preservação da arborização urbana." },
+        { icon:"recycle", title:"Destinação Final de Resíduos", description:"Triagem, transporte e encaminhamento de resíduos não perigosos a locais licenciados, conforme CNAE 3811-4/00." }
       ],
       differentials: [
         { icon:"shield", title:"26 anos de operação pública", description:"Atuação contínua desde 1999, com histórico auditável de cumprimento de rotas e contratos." },
@@ -630,10 +672,10 @@
         { icon:"gauge", title:"Equipe e frota dimensionadas", description:"Rotas planejadas por volume real de resíduos, evitando atraso na coleta em dias de pico." }
       ],
       stats: [
+          { value: 26, suffix: "", label: "Operação" },
         { value: 1999, suffix: "", label: "Início da operação" },
         { value: 4.8, suffix: "/5", label: "Avaliação no Google" },
         { value: 100, suffix: "%", label: "Destinação correta" },
-        { value: 6, suffix: " dias", label: "De operação por semana" }
       ],
       dayRoute: [
         { time:"05:30", title:"Saída da garagem", description:"Equipes e veículos deixam a base já com a rota do dia carregada e conferida." },
@@ -647,9 +689,9 @@
         { quote:"Contratamos a capina e roçada para os terrenos da associação. Serviço no prazo combinado, sem retrabalho.", name:"Associação Comercial", role:"Parceiro institucional", company:"Nova Lima" }
       ],
       pricing: [
-        { code:"MOD-01", name:"Coleta Domiciliar", period:"Contrato público", description:"Recolhimento periódico de resíduos residenciais por rota fixa.", features:["Rota e horário publicados","Frequência definida em contrato","Destinação licenciada"], featured:false },
-        { code:"MOD-02", name:"Varrição e Zeladoria", period:"Contrato público", description:"Varrição de vias, praças e limpeza contínua de espaços públicos.", features:["Varrição manual e mecanizada","Limpeza de praças e parques","Equipe fixa por região"], featured:true },
-        { code:"MOD-03", name:"Gestão Ambiental de Resíduos", period:"Contrato público", description:"Capina, poda e destinação final de resíduos não perigosos.", features:["Capina e roçada programada","Poda técnica de árvores","Manifesto de transporte emitido"], featured:false }
+        { name:"Coleta Domiciliar", period:"Contrato público", description:"Recolhimento periódico de resíduos residenciais por rota fixa.", features:["Rota e horário publicados","Frequência definida em contrato","Destinação licenciada"], featured:false },
+        { name:"Varrição e Zeladoria", period:"Contrato público", description:"Varrição de vias, praças e limpeza contínua de espaços públicos.", features:["Varrição manual e mecanizada","Limpeza de praças e parques","Equipe fixa por região"], featured:true },
+        { name:"Gestão Ambiental de Resíduos", period:"Contrato público", description:"Capina, poda e destinação final de resíduos não perigosos.", features:["Capina e roçada programada","Poda técnica de árvores","Manifesto de transporte emitido"], featured:false }
       ],
       faq: [
         { q:"Quais serviços a Liarth presta?", a:"Coleta domiciliar, varrição de vias e logradouros, limpeza de praças e parques, capina e roçada, poda de árvores e destinação final de resíduos não perigosos." },
@@ -672,7 +714,6 @@
       for (var i=0;i<entries.length;i++){
         if (entries[i].isIntersecting){
           entries[i].target.classList.add("is-visible");
-          if (entries[i].target.classList.contains("stats-reveal")) animateStats();
           revealObserver.unobserve(entries[i].target);
         }
       }
@@ -745,24 +786,7 @@
 
 
     /* ---------- horizontal scroll ---------- */
-    function initHScroll(){
-      var wraps = document.querySelectorAll(".hscroll-wrap");
-      if (!wraps.length) return;
-      function updateHScroll(){
-        wraps.forEach(function(wrap){
-          var inner = wrap.querySelector(".hscroll-inner");
-          if (!inner) return;
-          var rect = wrap.getBoundingClientRect();
-          var progress = (window.innerHeight - rect.top) / (window.innerHeight + rect.height + 600);
-          progress = Math.max(0, Math.min(1, progress));
-          var eased = progress < 0.5 ? 2 * progress * progress : 1 - Math.pow(-2 * progress + 2, 2) / 2;
-          var maxScroll = inner.scrollWidth - wrap.clientWidth;
-          if (maxScroll > 0) inner.style.transform = "translateX(-"+(eased * maxScroll)+"px)";
-        });
-      }
-      window.addEventListener("scroll", updateHScroll, { passive: true });
-      updateHScroll();
-    }
+    function initHScroll(){}
 
     /* ---------- active nav link ---------- */
     function initActiveNav(){
@@ -821,7 +845,6 @@
         var dist = Math.max(100, Math.min(190, r.bairro.length * 11));
         html += '<div class="relative grid grid-cols-4 items-center gap-2 border-b border-ink/10 px-5 py-4 last:border-b-0 sm:px-7 group cursor-default transition-colors hover:bg-paper" style="--td:'+dist+'px">'
           + '<div class="relative font-mono text-[0.8rem] text-ink sm:text-sm">'
-          + '<span class="schedule-truck hidden sm:inline">'+icn("truck",14)+'</span>'
           + '<span class="relative z-10 ml-0 group-hover:ml-8 transition-all duration-500">'+r.bairro+'</span>'
           + '</div>'
           + '<div class="hidden font-mono text-xs text-ink-soft sm:block relative z-10">'+r.servico+'</div>'
@@ -839,8 +862,7 @@
         var s = site.services[i];
         html += '<div class="reveal card card-tilt flex flex-col p-7" style="transition-delay:'+(i*60)+'ms">'
           + '<div class="flex items-center justify-between">'
-          + '<span class="grid h-12 w-12 shrink-0 place-items-center border-2 border-ink text-green">'+icn(s.icon,20)+'</span>'
-          + '<span class="code-tag text-ink-soft">'+s.code+'</span>'
+          + '<span class="grid h-12 w-12 shrink-0 place-items-center text-green">'+icn(s.icon,20)+'</span>'
           + '</div>'
           + '<h3 class="mt-4 font-display text-xl font-bold text-ink">'+s.title+'</h3>'
           + '<p class="mt-2 text-sm leading-relaxed text-ink-soft flex-1">'+s.description+'</p>'
@@ -856,7 +878,7 @@
       for (var i=0;i<site.differentials.length;i++){
         var d = site.differentials[i];
         html += '<div class="reveal flex items-start gap-5 py-6 border-t border-ink/10 first:border-t-0" style="transition-delay:'+(i*50)+'ms">'
-          + '<span class="grid h-11 w-11 shrink-0 place-items-center border-2 border-ink text-green mt-0.5">'+icn(d.icon,18)+'</span>'
+          + '<span class="grid h-11 w-11 shrink-0 place-items-center text-blue mt-0.5">'+icn(d.icon,18)+'</span>'
           + '<div><h3 class="font-display text-base font-bold text-ink">'+d.title+'</h3><p class="mt-1 text-sm leading-relaxed text-ink-soft">'+d.description+'</p></div>'
           + '</div>';
       }
@@ -868,55 +890,41 @@
       var html = "";
       for (var i=0;i<site.stats.length;i++){
         var s = site.stats[i];
-        html += '<div class="reveal border border-paper/20 px-4 py-8 text-center text-paper" style="transition-delay:'+(i*70)+'ms">'
-          + '<div class="odometer text-3xl font-bold sm:text-4xl"><span class="stat-num" data-target="'+s.value+'">0</span>'+s.suffix+'</div>'
+        html += '<div class="reveal border border-paper/20 px-4 py-8 text-center text-paper rounded-[var(--radius-md)]" style="transition-delay:'+(i*70)+'ms">'
+          + '<div class="odometer text-3xl font-bold sm:text-4xl">'+s.value+s.suffix+'</div>'
           + '<div class="mt-2 code-tag text-paper/55">'+s.label+'</div>'
           + '</div>';
       }
       grid.innerHTML = html;
     }
-    function animateStats(){
-      document.querySelectorAll(".stat-num").forEach(function(el){
-        var target = parseFloat(el.getAttribute("data-target")) || 0;
-        var isDecimal = target % 1 !== 0;
-        var start = performance.now();
-        (function animate(t){
-          var p = Math.min((t-start)/1600,1);
-          var eased = 1 - Math.pow(1-p,3);
-          el.textContent = isDecimal ? (target*eased).toFixed(1) : Math.round(target*eased);
-          if (p<1) requestAnimationFrame(animate);
-        })(performance.now());
-      });
-    }
+    
 
     function renderDayRoute(){
       var wrap = document.getElementById("dayRouteTimeline");
       if (!wrap || !site.dayRoute.length) return;
-      var html = '<div class="hscroll-wrap"><div class="hscroll-inner">';
+      var html = '<div class="timeline-list">';
       for (var i=0;i<site.dayRoute.length;i++){
         var p = site.dayRoute[i];
-        html += '<div class="reveal card card-tilt flex flex-col p-7 min-w-[260px] sm:min-w-[300px]" style="transition-delay:'+(i*80)+'ms">'
-          + '<span class="grid h-10 w-10 place-items-center border-2 border-ink text-blue">'+icn("clock",16)+'</span>'
-          + '<div class="flex items-baseline gap-3 mt-4"><span class="font-mono text-sm font-bold text-blue">'+p.time+'</span></div>'
-          + '<h3 class="font-display text-lg font-bold text-ink mt-1">'+p.title+'</h3>'
-          + '<p class="mt-2 text-sm leading-relaxed text-ink-soft flex-1">'+p.description+'</p>'
+        html += '<div class="flex items-center gap-4 py-3 border-b border-ink/10">'
+          + '<span class="font-mono text-sm font-bold text-green w-14 flex-shrink-0">'+p.time+'</span>'
+          + '<span class="font-display text-base font-bold text-ink">'+p.title+'</span>'
           + '</div>';
       }
-      html += '</div></div>';
+      html += '</div>';
       wrap.innerHTML = html;
     }
 
     function hash(str){ var h=0; for (var i=0;i<str.length;i++){ h=(h<<5)-h+str.charCodeAt(i); h|=0; } return Math.abs(h); }
     function getInitials(name){
       var clean = name.replace(/[[\]]/g,"").trim();
-      if (!clean) return "•";
+      if (!clean) return "â€¢";
       var words = clean.split(/\s+/).filter(Boolean);
       if (words.length===1) return words[0].slice(0,2).toUpperCase();
       return (words[0][0]+words[words.length-1][0]).toUpperCase();
     }
     function avatar(name,size){
       size = size||44;
-      return '<span class="inline-grid shrink-0 place-items-center font-display font-bold" style="width:'+size+'px;height:'+size+'px;font-size:'+(size*0.36)+'px;border:2px solid rgb(var(--ink));background:rgb(var(--paper-2));color:rgb(var(--ink))" aria-hidden="true">'+getInitials(name)+'</span>';
+      return '<span class="inline-grid shrink-0 place-items-center font-display font-bold" style="width:'+size+'px;height:'+size+'px;font-size:'+(size*0.36)+'px;border:1px solid rgb(var(--green));background:rgb(var(--paper-2));color:rgb(var(--ink));border-radius:9999px" aria-hidden="true">'+getInitials(name)+'</span>';
     }
 
     function renderTestimonials(){
@@ -946,14 +954,14 @@
         for (var j=0;j<p.features.length;j++){ feat += '<li class="flex items-start gap-2.5 text-sm normal-case text-ink">'+icn("check-circle",16)+'<span>'+p.features[j]+'</span></li>'; }
         html += '<div class="reveal h-full" style="transition-delay:'+(i*80)+'ms">'
           + '<div class="card h-full flex flex-col p-7 relative'+(p.featured?' ring-2 ring-green ring-offset-2 ring-offset-paper-2':'')+'">'
-          + (p.featured ? '<span class="badge badge-green absolute -top-3.5 left-1/2 -translate-x-1/2 text-[0.65rem] whitespace-nowrap">MAIS CONTRATADO</span>' : '')
-          + '<div><div class="flex items-center justify-between"><h3 class="font-display text-lg font-bold text-ink">'+p.name+'</h3><span class="code-tag text-ink-soft">'+p.code+'</span></div>'
+          + (p.featured ? '<span class="badge badge-blue absolute -top-3.5 left-1/2 -translate-x-1/2 text-[0.65rem] whitespace-nowrap">MAIS CONTRATADO</span>' : '')
+          + '<div><div class="flex items-center justify-between"><h3 class="font-display text-lg font-bold text-ink">'+p.name+'</h3></div>'
           + '<p class="mt-2 text-sm leading-relaxed text-ink-soft">'+p.description+'</p>'
           + '<p class="mt-3 code-tag text-blue">'+p.period+'</p></div>'
           + '<div class="mt-6 flex-1"><ul class="space-y-2.5">'
           + feat
           + '</ul></div>'
-          + '<a href="#contato" class="btn '+(p.featured?"btn-green":"btn-outline")+' mt-6 w-full">Solicitar Proposta</a>'
+          + '<a href="#contato" class="btn '+(p.featured?"btn-green":"btn-outline border-green hover:bg-green text-green")+' mt-6 w-full">Solicitar Proposta</a>'
           + '</div></div>';
       }
       grid.innerHTML = html;
@@ -988,8 +996,6 @@
           if (!isOpen){
             answer.className = "faq-answer grid grid-rows-[1fr] opacity-100 transition-all duration-300 ease-out";
             icon.innerHTML = icn("minus",15,2.4);
-            icon.style.background = "rgb(var(--ink))";
-            icon.style.color = "rgb(var(--paper))";
           }
         });
       });
@@ -999,7 +1005,7 @@
       var list = document.getElementById("contactInfoList");
       var c = site.contact;
       var html = '<div class="card flex items-start gap-4 p-5">'
-        + '<span class="grid h-11 w-11 shrink-0 place-items-center border-2 border-ink text-green">'+icn("map-pin",20)+'</span>'
+        + '<span class="grid h-11 w-11 shrink-0 place-items-center text-blue">'+icn("map-pin",20)+'</span>'
         + '<div><p class="text-sm font-semibold normal-case text-ink">Endereço</p>'
         + '<p class="mt-0.5 text-sm normal-case text-ink-soft">'+c.address.line1+'</p>'
         + '<p class="text-sm normal-case text-ink-soft">'+c.address.line2+' · '+c.address.cep+'</p></div></div>';
@@ -1007,16 +1013,16 @@
       var items = [
         { icon:"phone", label:"Telefone", value:c.phone, href:c.phoneHref },
         { icon:"mail", label:"E-mail", value:c.email, href:c.emailHref },
-        { icon:"message-circle", label:"WhatsApp", value:c.whatsapp, href:c.whatsappHref }
+        { icon:"whatsapp", label:"WhatsApp", value:c.whatsapp, href:c.whatsappHref }
       ];
       for (var i=0;i<items.length;i++){
         var it = items[i];
         html += '<a href="'+it.href+'" class="card flex items-center gap-4 p-5">'
-          + '<span class="grid h-11 w-11 shrink-0 place-items-center border-2 border-ink text-green">'+icn(it.icon,19)+'</span>'
+          + '<span class="grid h-11 w-11 shrink-0 place-items-center text-blue">'+icn(it.icon,19)+'</span>'
           + '<div><p class="text-sm font-semibold normal-case text-ink">'+it.label+'</p><p class="mt-0.5 text-sm normal-case text-ink-soft">'+it.value+'</p></div></a>';
       }
       html += '<div class="card flex items-center gap-4 p-5">'
-        + '<span class="grid h-11 w-11 shrink-0 place-items-center border-2 border-ink text-blue">'+icn("clock",20)+'</span>'
+        + '<span class="grid h-11 w-11 shrink-0 place-items-center text-blue">'+icn("clock",20)+'</span>'
         + '<div><p class="text-sm font-semibold normal-case text-ink">Horário de atendimento</p><p class="mt-0.5 text-sm normal-case text-ink-soft">'+c.hours+'</p></div></div>';
 
       list.innerHTML = html;
@@ -1027,7 +1033,7 @@
       var html = "";
       for (var i=0;i<site.social.length;i++){
         var s = site.social[i];
-        html += '<a href="'+s.href+'" aria-label="'+s.label+'" class="grid h-9 w-9 place-items-center border-2 border-ink text-ink-soft transition-colors hover:bg-ink hover:text-paper">'+icn(s.icon,16)+'</a>';
+        html += '<a href="'+s.href+'" aria-label="'+s.label+'" class="grid h-9 w-9 place-items-center border border-gray-300 rounded-full text-ink-soft transition-colors hover:bg-green hover:text-paper">'+icn(s.icon,16)+'</a>';
       }
       links.innerHTML = html;
     }
@@ -1042,7 +1048,7 @@
       var sh = "";
       for (var i=0;i<site.social.length;i++){
         var s = site.social[i];
-        sh += '<a href="'+s.href+'" aria-label="'+s.label+'" class="grid h-9 w-9 place-items-center border-2 border-paper/25 text-paper/60 transition-colors hover:bg-paper hover:text-ink">'+icn(s.icon,16)+'</a>';
+        sh += '<a href="'+s.href+'" aria-label="'+s.label+'" class="grid h-9 w-9 place-items-center border-2 border-paper/25 text-paper/60 transition-colors hover:bg-paper hover:text-ink rounded-full">'+icn(s.icon,16)+'</a>';
       }
       document.getElementById("footerSocial").innerHTML = sh;
 
@@ -1050,7 +1056,7 @@
       var colHtml = "";
       for (var i=0;i<site.footer.columns.length;i++){
         var col = site.footer.columns[i];
-        colHtml += '<div><h3 class="code-tag text-paper/40">'+col.title+'</h3><ul class="mt-4 space-y-3">';
+        colHtml += '<div><h3 class="code-tag text-paper/55">'+col.title+'</h3><ul class="mt-4 space-y-3">';
         for (var j=0;j<col.links.length;j++){ colHtml += '<li><a href="'+col.links[j].href+'" class="text-sm normal-case text-paper/70 transition-colors hover:text-paper">'+col.links[j].label+'</a></li>'; }
         colHtml += '</ul></div>';
       }
@@ -1087,7 +1093,6 @@
       renderContactInfo();
       renderSocialLinks();
       renderFooter();
-      document.getElementById("formCodeStamp").textContent = "#"+Math.floor(1000+Math.random()*9000);
       observeReveals();
       initSmoothScroll();
       initActiveNav();
