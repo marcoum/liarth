@@ -1,0 +1,1117 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Liarth Limpeza Urbana | Rota, Coleta e Destinação — Nova Lima, MG</title>
+  <meta name="description" content="Desde 1999 a Liarth executa coleta domiciliar, varrição, capina, poda e destinação correta de resíduos em Nova Lima - MG. Serviço público de limpeza urbana." />
+  <meta name="keywords" content="limpeza urbana, coleta de lixo, varrição de ruas, capina, poda, resíduos sólidos, Nova Lima, Liarth" />
+  <meta name="author" content="Liarth Limpeza Urbana Ltda" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#173A1E" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:site_name" content="Liarth Limpeza Urbana" />
+  <meta property="og:title" content="Liarth Limpeza Urbana — Rota, coleta e destinação" />
+  <meta property="og:description" content="Serviços públicos de limpeza urbana em Nova Lima - MG desde 1999." />
+  <meta property="og:url" content="https://liarth.com.br" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Liarth Limpeza Urbana Ltda",
+      "slogan": "Toda rua tem uma rota. Toda rota, um compromisso.",
+      "description": "Prestadora de serviços públicos de coleta domiciliar, varrição, capina, poda e destinação correta de resíduos em Nova Lima - MG, desde 1999.",
+      "url": "https://liarth.com.br",
+      "email": "liarth@liarth.com.br",
+      "telephone": "+55 (31) 3694-3900",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "MG-030, 1456 - Vila Nova Suíça",
+        "addressLocality": "Nova Lima",
+        "addressRegion": "MG",
+        "postalCode": "34012-580",
+        "addressCountry": "BR"
+      },
+      "sameAs": ["https://www.instagram.com/liarth.limpezaurbana/"]
+    }
+  </script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: 'rgb(var(--ink) / <alpha-value>)',
+            'ink-soft': 'rgb(var(--ink-soft) / <alpha-value>)',
+            paper: 'rgb(var(--paper) / <alpha-value>)',
+            'paper-2': 'rgb(var(--paper-2) / <alpha-value>)',
+            green: 'rgb(var(--green) / <alpha-value>)',
+            blue: 'rgb(var(--blue) / <alpha-value>)',
+          },
+          fontFamily: {
+            sans: 'var(--font-sans)',
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    :root {
+      --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+
+      --ink: 20 20 22;
+      --ink-soft: 90 90 86;
+      --paper: 250 249 246;
+      --paper-2: 240 238 231;
+      --green: 47 128 55;
+      --blue: 15 107 153;
+
+      color-scheme: light;
+    }
+
+    *, ::before, ::after { border-color: rgb(var(--ink)); }
+    html { scroll-behavior: smooth; }
+    body {
+      background: rgb(var(--paper));
+      color: rgb(var(--ink));
+      font-family: var(--font-sans);
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+    section[id], [id] { scroll-margin-top: 5.25rem; }
+    ::selection { background: rgb(var(--green)); color: rgb(var(--paper)); }
+    :focus-visible { outline: 3px solid rgb(var(--blue)); outline-offset: 2px; }
+    h1, h2, h3, h4 { font-family: var(--font-sans); letter-spacing: 0.01em; text-wrap: balance; text-transform: uppercase; font-weight: 700; line-height: 1.1; }
+    h1 { font-weight: 800; }
+    p { text-wrap: pretty; }
+    .font-display { font-family: var(--font-sans); }
+
+    .container-app { width: 100%; margin-inline: auto; max-width: 76rem; padding-inline: clamp(1.25rem, 5vw, 2rem); }
+
+    .code-tag { font-family: var(--font-sans); font-size: 0.7rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 0.5rem; font-family: var(--font-sans); font-size: 0.8rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; }
+
+    /* ---------- badge ---------- */
+    .badge {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      border: 2px solid rgb(var(--ink));
+      padding: 0.3rem 0.8rem;
+      font-family: var(--font-sans); font-size: 0.72rem; font-weight: 700;
+      letter-spacing: 0.06em; text-transform: uppercase;
+      background: rgb(var(--paper));
+    }
+    .badge-green { border-color: rgb(var(--green)); color: rgb(var(--green)); }
+
+    /* ---------- buttons ---------- */
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+      font-family: var(--font-sans); font-weight: 600; font-size: 0.9rem;
+      padding: 0.8rem 1.5rem;
+      white-space: nowrap; cursor: pointer; user-select: none;
+      transition: transform .2s ease, background-color .2s ease, color .2s ease, box-shadow .2s ease;
+    }
+    .btn:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+    .btn:active { transform: translateY(0); }
+    .btn-green { background: rgb(var(--green)); color: rgb(var(--paper)); }
+    .btn-green:hover { background: rgb(var(--paper)); color: rgb(var(--green)); border: 2px solid rgb(var(--green)); }
+    .btn-blue { background: rgb(var(--blue)); color: rgb(var(--paper)); }
+    .btn-blue:hover { background: rgb(var(--paper)); color: rgb(var(--blue)); border: 2px solid rgb(var(--blue)); }
+    .btn-ink { background: rgb(var(--ink)); color: rgb(var(--paper)); }
+    .btn-ink:hover { background: rgb(var(--paper)); color: rgb(var(--ink)); border: 2px solid rgb(var(--ink)); }
+    .btn-outline { background: transparent; color: rgb(var(--ink)); border: 2px solid rgb(var(--ink)); }
+    .btn-outline:hover { background: rgb(var(--ink)); color: rgb(var(--paper)); }
+    .btn-outline-paper { background: transparent; color: rgb(var(--paper)); border: 2px solid rgb(var(--paper)); }
+    .btn-outline-paper:hover { background: rgb(var(--paper)); color: rgb(var(--ink)); }
+    .btn-sm { padding: 0.5rem 1rem; font-size: 0.8rem; }
+
+    /* ---------- cards ---------- */
+    .card { background: rgb(var(--paper-2)); transition: transform .25s ease, box-shadow .25s ease; }
+    .card:hover { box-shadow: 0 12px 36px rgba(0,0,0,0.08); }
+    .card-tilt { transition: transform 0.1s ease-out !important; }
+
+    .hairline { height: 2px; background: rgb(var(--ink)); border: 0; }
+
+    .field-label { display: block; font-family: var(--font-sans); font-size: 0.72rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 0.5rem; color: rgb(var(--ink-soft)); }
+    .field-control {
+      width: 100%; background: rgb(var(--paper)); border: 2px solid rgb(var(--ink));
+      color: rgb(var(--ink)); padding: 0.8rem 1rem; font-size: 0.95rem; font-family: var(--font-sans);
+      transition: background-color .2s ease;
+    }
+    .field-control::placeholder { color: rgb(var(--ink-soft)); opacity: .7; }
+    .field-control:focus { outline: none; background: rgb(var(--paper-2)); }
+    textarea.field-control { min-height: 130px; resize: vertical; }
+
+    .reveal { opacity: 0; transform: translateY(30px) scale(0.97); transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1); }
+    .reveal.is-visible { opacity: 1; transform: translateY(0) scale(1); }
+
+    /* ---------- parallax ---------- */
+    .parallax { position: absolute; inset: 0; overflow: hidden; }
+    .parallax img { width: 100%; height: 120%; object-fit: cover; will-change: transform; }
+    #heroParallax {
+      animation: kenBurns 20s ease-in-out infinite alternate;
+    }
+    #heroParallax img {
+      transition: transform 0.1s ease-out;
+    }
+    @keyframes kenBurns {
+      0% { transform: scale(1) translate(0,0); }
+      100% { transform: scale(1.08) translate(-1%,-1%); }
+    }
+
+    /* ---------- hero stagger text ---------- */
+    .hero-word { display: inline-block; opacity: 0; transform: translateY(60px); animation: heroFadeUp 0.8s cubic-bezier(.16,1,.3,1) forwards; }
+    .hero-word:nth-child(1) { animation-delay: 0.1s; }
+    .hero-word:nth-child(2) { animation-delay: 0.2s; }
+    .hero-word:nth-child(3) { animation-delay: 0.3s; }
+    .hero-word:nth-child(4) { animation-delay: 0.4s; }
+    .hero-word:nth-child(5) { animation-delay: 0.5s; }
+    .hero-word:nth-child(6) { animation-delay: 0.6s; }
+    @keyframes heroFadeUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ---------- 3D card tilt ---------- */
+    .card-tilt { transition: transform 0.15s ease-out; will-change: transform; }
+
+    /* ---------- horizontal scroll ---------- */
+    .hscroll-wrap { overflow: hidden; }
+    .hscroll-inner { display: flex; gap: 2rem; }
+    .hscroll-inner > * { min-width: 280px; flex-shrink: 0; }
+    @media (min-width: 1024px) {
+      .hscroll-inner { padding-bottom: 2rem; }
+    }
+
+    /* ---------- route truck animation ---------- */
+    .schedule-truck {
+      position: absolute; left: 0; top: 50%; margin-top: -8px;
+      opacity: 0; z-index: 10;
+    }
+    @keyframes truckTrip {
+      0% { transform: translateX(0) scaleX(1); opacity: 0; }
+      8% { transform: translateX(0) scaleX(1); opacity: 1; }
+      48% { transform: translateX(var(--td,100px)) scaleX(1); opacity: 1; }
+      52% { transform: translateX(var(--td,100px)) scaleX(-1); opacity: 1; }
+      92% { transform: translateX(0) scaleX(-1); opacity: 1; }
+      96% { transform: translateX(0) scaleX(1); opacity: 1; }
+      100% { transform: translateX(0) scaleX(1); opacity: 0; }
+    }
+    .group:hover .schedule-truck { animation: truckTrip 2.5s ease-in-out infinite; }
+    .group:hover .schedule-truck svg { display: block; }
+
+    .odometer { font-family: var(--font-sans); font-variant-numeric: tabular-nums; }
+
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: rgb(var(--blue)); border-radius: 0; }
+    ::-webkit-scrollbar-thumb:hover { background: rgb(var(--blue) / 0.8); }
+    html { scrollbar-color: rgb(var(--blue)) transparent; scrollbar-width: thin; }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <a href="#inicio" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:bg-ink focus:px-5 focus:py-2.5 focus:text-sm focus:font-semibold focus:text-paper">Pular para o conteúdo</a>
+
+  <!-- ======== HEADER ======== -->
+  <header id="siteHeader" class="sticky top-0 z-50">
+    <div id="headerInner" class="border-b-2 border-ink/10 bg-paper/95 backdrop-blur-md">
+      <div class="container-app flex h-16 items-center justify-between gap-4 lg:h-[4.25rem]">
+        <a href="#inicio" aria-label="Liarth Limpeza Urbana" class="flex shrink-0 items-center gap-2.5">
+          <span class="grid h-10 w-10 place-items-center overflow-hidden border-2 border-ink bg-paper">
+            <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlwM3zumuSqMMFu_0Bwhkk7zmCR0renfnHSUWSzzsFxbEMksbHAs1nyHsUgTWyhIFfnUIiH73DmtTKhdqKc6i1SUKzbHGoxfJk-CAjwuHbD6peLfzzd_fGHzH-4sKUhQCV_-AJs=s680-w680-h510-rw" alt="" width="40" height="40" class="h-full w-full object-cover" loading="lazy" />
+          </span>
+          <span class="hidden flex-col leading-none sm:flex">
+            <span class="font-display text-xl font-bold tracking-tight text-ink">LIARTH</span>
+            <span class="code-tag text-ink-soft" style="letter-spacing:.14em">LIMPEZA URBANA</span>
+          </span>
+        </a>
+
+        <nav id="navDesktop" class="hidden items-center gap-1 lg:flex" aria-label="Principal"></nav>
+
+        <div class="flex items-center gap-2">
+          <a id="headerPhone" href="tel:3136943900" class="hidden items-center gap-2 code-tag text-ink transition-colors hover:text-green lg:flex">(31) 3694-3900</a>
+          <a href="#contato" class="btn btn-green btn-sm hidden sm:inline-flex">Solicitar Atendimento</a>
+          <button type="button" onclick="toggleMobileMenu()" aria-label="Abrir menu" aria-expanded="false" id="menuToggle" class="grid h-10 w-10 place-items-center border-2 border-ink bg-paper text-ink lg:hidden">
+            <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h16"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="overflow-hidden border-b-2 border-ink bg-paper transition-[max-height,opacity] duration-500 ease-out max-h-0 opacity-0 lg:hidden">
+      <div class="container-app flex flex-col gap-1 py-4" id="mobileNavLinks"></div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===== HERO ===== -->
+    <section id="inicio" class="relative h-screen min-h-[600px] flex items-center overflow-hidden bg-ink">
+      <div class="parallax" id="heroParallax">
+        <img src="https://radiotropical.net/wp-content/uploads/2024/06/g_185_2_5_28062024104612-e1719600561210.jpg" alt="Equipe da Liarth em operação" fetchpriority="high" />
+      </div>
+      <div class="absolute inset-0" style="background:linear-gradient(135deg, rgba(20,20,22,0.82) 0%, rgba(20,20,22,0.25) 60%, rgba(20,20,22,0.05) 100%)"></div>
+      <div class="absolute inset-0 opacity-[0.03]" style="background-image:radial-gradient(circle, rgb(255,255,255) 1px, transparent 1px); background-size:32px 32px"></div>
+      <div class="container-app relative w-full">
+        <div class="max-w-2xl">
+          <div class="reveal">
+            <span class="inline-flex items-center gap-2 font-sans text-[0.6rem] font-bold tracking-[0.18em] text-paper/50 uppercase border border-paper/15 bg-paper/[0.03] px-3 py-1.5">OS Nº 04178 · LIMPEZA URBANA</span>
+          </div>
+          <div class="reveal mt-8" style="transition-delay:80ms">
+            <h1 class="font-display text-5xl font-extrabold leading-[1.05] text-paper sm:text-6xl lg:text-7xl">
+              <span class="hero-word">Rua</span> <span class="hero-word">tem</span><br>
+              <span class="hero-word text-green">rota.</span>
+            </h1>
+            <h1 class="font-display text-5xl font-extrabold leading-[1.05] text-paper sm:text-6xl lg:text-7xl -mt-2">
+              <span class="hero-word">Cidade</span> <span class="hero-word">tem</span><br>
+              <span class="hero-word text-green">compromisso.</span>
+            </h1>
+          </div>
+          <div class="reveal mt-6 w-16 h-[2px] bg-green/60" style="transition-delay:300ms"></div>
+          <div class="reveal mt-6 max-w-md" style="transition-delay:160ms">
+            <p class="text-base leading-relaxed text-paper/60">Desde 1999 a Liarth executa a coleta, a varrição e a destinação correta de resíduos que mantêm Nova Lima limpa — bairro por bairro, todos os dias.</p>
+          </div>
+          <div class="reveal mt-8 flex flex-col gap-3 sm:flex-row" style="transition-delay:240ms">
+            <a href="#servicos" class="btn btn-green">Ver Serviços</a>
+            <a href="#contato" class="btn btn-outline-paper">Solicitar Atendimento</a>
+          </div>
+          <div class="reveal mt-12 hidden lg:flex items-center gap-8" style="transition-delay:360ms">
+            <div>
+              <p class="font-display text-2xl font-bold text-paper">26</p>
+              <p class="font-sans text-[0.6rem] font-bold tracking-[0.15em] text-paper/40 uppercase">Anos</p>
+            </div>
+            <div class="w-px h-10 bg-paper/10"></div>
+            <div>
+              <p class="font-display text-2xl font-bold text-paper">150+</p>
+              <p class="font-sans text-[0.6rem] font-bold tracking-[0.15em] text-paper/40 uppercase">Colaboradores</p>
+            </div>
+            <div class="w-px h-10 bg-paper/10"></div>
+            <div>
+              <p class="font-display text-2xl font-bold text-paper">35+</p>
+              <p class="font-sans text-[0.6rem] font-bold tracking-[0.15em] text-paper/40 uppercase">Bairros</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 z-10">
+        <span class="font-sans text-[0.55rem] font-bold tracking-[0.2em] text-paper/35 uppercase">Role</span>
+        <span class="block w-px h-8" style="background:linear-gradient(180deg, rgb(var(--paper)/0.5), transparent); animation:scrollPulse 2s ease-in-out infinite"></span>
+      </div>
+    </section>
+    <style>
+      @keyframes scrollPulse {
+        0%, 100% { transform: scaleY(0.3); opacity: 0.3; }
+        50% { transform: scaleY(1); opacity: 1; }
+      }
+    </style>
+
+    <!-- ===== SERVICES ===== -->
+    <section id="servicos" class="py-24 sm:py-28 lg:py-32">
+      <div class="container-app">
+        <div class="reveal max-w-xl">
+          <span class="eyebrow text-green">Serviços</span>
+          <h2 class="mt-3 font-display text-4xl font-bold leading-none text-ink sm:text-5xl">Seis frentes,<br>uma só cidade</h2>
+          <p class="mt-4 text-base leading-relaxed text-ink-soft">Cada ordem de serviço tem escopo, equipe e destino definidos — do recolhimento até a destinação final.</p>
+        </div>
+        <div id="serviceGrid" class="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3"></div>
+      </div>
+    </section>
+
+    <!-- ===== SCHEDULE ===== -->
+    <section id="rotas" class="bg-paper-2 py-24 sm:py-28 lg:py-32">
+      <div class="container-app">
+        <div class="reveal flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+          <div class="max-w-xl">
+            <span class="eyebrow text-blue">Painel de Rotas</span>
+            <h2 class="mt-3 font-display text-4xl font-bold leading-none text-ink sm:text-5xl">Cronograma por bairro</h2>
+            <p class="mt-3 text-base leading-relaxed text-ink-soft">Cada rota tem um dia, um horário e uma equipe. É assim que a coleta chega sem falha em toda a cidade.</p>
+          </div>
+        </div>
+        <div class="reveal mt-6" style="transition-delay:120ms">
+          <div class="card overflow-hidden">
+            <div class="grid grid-cols-4 gap-2 border-b border-ink/10 px-5 py-3 sm:px-7">
+              <span class="code-tag text-ink-soft">Bairro</span>
+              <span class="code-tag hidden text-ink-soft sm:block">Serviço</span>
+              <span class="code-tag text-ink-soft">Dias</span>
+              <span class="code-tag text-right text-ink-soft">Horário</span>
+            </div>
+            <div id="scheduleBoard"></div>
+          </div>
+        </div>
+        <p class="reveal mt-4 text-sm text-ink-soft" style="transition-delay:120ms">Horários de referência por rota — em caso de feriado, a coleta é reprogramada e comunicada com antecedência.</p>
+      </div>
+    </section>
+
+    <!-- ===== PARALLAX STATS ===== -->
+    <section id="numeros" class="relative overflow-hidden py-28 sm:py-32">
+      <div class="parallax">
+        <img src="https://www.portalaraxa.com.br/wp-content/uploads/2018/03/f_caminh%C3%B5es_coletadelixo-12.jpg" alt="Caminhão de coleta" loading="lazy" />
+      </div>
+      <div class="absolute inset-0" style="background:linear-gradient(180deg, rgba(20,20,22,0.88) 0%, rgba(20,20,22,0.75) 100%)"></div>
+      <div class="container-app relative">
+        <div class="reveal mx-auto max-w-2xl text-center">
+          <span class="eyebrow justify-center text-white/50">A operação em números</span>
+          <h2 class="mt-3 font-display text-4xl font-bold leading-none text-paper sm:text-5xl">Uma década de serviço público</h2>
+        </div>
+        <div id="statsGrid" class="mt-12 grid grid-cols-2 gap-6 sm:grid-cols-4 stats-reveal"></div>
+      </div>
+    </section>
+
+    <!-- ===== DIFFERENTIALS ===== -->
+    <section id="diferenciais" class="py-24 sm:py-28 lg:py-32">
+      <div class="container-app">
+        <div class="grid gap-14 lg:grid-cols-[1fr_1.3fr] lg:gap-20">
+          <div class="reveal lg:sticky lg:top-28 lg:self-start">
+            <span class="eyebrow text-blue">Diferenciais</span>
+            <h2 class="mt-3 font-display text-4xl font-bold leading-none text-ink sm:text-5xl">O que está no contrato — e o que cumprimos</h2>
+            <p class="mt-4 text-base leading-relaxed text-ink-soft">26 anos de operação pública deixam claro o que separa uma rota cumprida de uma rota apenas prometida.</p>
+            <a href="#contato" class="btn btn-blue mt-8">Falar com a Liarth</a>
+          </div>
+          <div id="diffList" class="flex flex-col gap-0"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ROTA DO DIA (timeline) ===== -->
+    <section id="rota-do-dia" class="bg-paper-2 py-24 sm:py-28 lg:py-32">
+      <div class="container-app">
+        <div class="reveal mx-auto max-w-2xl text-center">
+          <span class="eyebrow justify-center text-green">A Rota do Dia</span>
+          <h2 class="mt-3 font-display text-4xl font-bold leading-none text-ink sm:text-5xl">Da garagem à destinação final</h2>
+          <p class="mt-3 text-base leading-relaxed text-ink-soft">O ciclo completo de uma rota de coleta — da saída da base até o manifesto de destinação.</p>
+        </div>
+        <div id="dayRouteTimeline" class="relative mt-14 mx-auto max-w-3xl"></div>
+      </div>
+    </section>
+
+    <!-- ===== TESTIMONIALS ===== -->
+    <section id="depoimentos" class="py-24 sm:py-28 lg:py-32">
+      <div class="container-app">
+        <div class="reveal mx-auto max-w-2xl text-center">
+          <span class="eyebrow justify-center text-green">Depoimentos</span>
+          <h2 class="mt-3 font-display text-4xl font-bold leading-none text-ink sm:text-5xl">A voz de quem vive a cidade</h2>
+        </div>
+        <div id="testimonialGrid" class="mt-14 grid gap-6 lg:grid-cols-3"></div>
+      </div>
+    </section>
+
+    <!-- ===== PRICING ===== -->
+    <section id="contratos" class="bg-paper-2 py-24 sm:py-28 lg:py-32">
+      <div class="container-app">
+        <div class="reveal mx-auto max-w-2xl text-center">
+          <span class="eyebrow text-blue">Modalidades</span>
+          <h2 class="mt-3 font-display text-4xl font-bold leading-none text-ink sm:text-5xl">Modalidades de contrato público</h2>
+          <p class="mt-4 text-base leading-relaxed text-ink-soft">Cada modalidade tem escopo, equipe e frequência definidos junto ao contratante.</p>
+        </div>
+        <div id="pricingGrid" class="mx-auto mt-16 grid max-w-5xl items-stretch gap-6 lg:grid-cols-3"></div>
+      </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section id="faq" class="py-24 sm:py-28 lg:py-32">
+      <div class="container-app grid gap-12 lg:grid-cols-[1fr_1.5fr] lg:gap-16">
+        <div class="reveal lg:sticky lg:top-28 lg:self-start">
+          <span class="eyebrow text-green">Dúvidas</span>
+          <h2 class="mt-3 font-display text-4xl font-bold leading-none text-ink sm:text-5xl">Perguntas mais comuns</h2>
+          <p class="mt-4 text-base leading-relaxed text-ink-soft">Ainda tem dúvidas? Fale com a nossa equipe.</p>
+          <a href="#contato" class="btn btn-blue mt-8">Entrar em Contato</a>
+        </div>
+        <div id="faqList" class="flex flex-col gap-2"></div>
+      </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="bg-green py-24 sm:py-28 lg:py-32">
+      <div class="container-app text-center text-paper">
+        <span class="inline-flex items-center gap-2 border border-paper/20 bg-paper/5 px-4 py-1.5 font-sans text-[0.65rem] font-bold tracking-[0.15em] text-paper/70 uppercase">MANIFESTO Nº 04178</span>
+        <h2 class="mx-auto mt-6 max-w-3xl font-display text-4xl font-bold leading-[0.95] sm:text-6xl">Toda cidade limpa começou com uma rota cumprida</h2>
+        <p class="mx-auto mt-5 max-w-xl text-paper/80 sm:text-lg">Fale com a Liarth e leve o mesmo padrão de operação para o seu bairro ou município.</p>
+        <div class="mt-10 flex flex-col justify-center gap-3 sm:flex-row">
+          <a href="tel:3136943900" class="btn btn-ink">Ligar para (31) 3694-3900</a>
+          <a href="mailto:liarth@liarth.com.br" class="btn btn-outline-paper">Enviar E-mail</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section id="contato" class="py-24 sm:py-28 lg:py-32">
+      <div class="container-app">
+        <div class="reveal mx-auto flex max-w-2xl flex-col items-center gap-4 text-center">
+          <span class="eyebrow text-blue">Contato</span>
+          <h2 class="font-display text-4xl font-bold leading-none text-ink sm:text-5xl">Abrir uma ordem de serviço</h2>
+          <p class="text-base leading-relaxed text-ink-soft sm:text-lg">Preencha os dados abaixo — sua solicitação segue direto para o nosso WhatsApp de atendimento.</p>
+        </div>
+
+        <div class="mt-14 grid gap-8 lg:grid-cols-[0.82fr_1.18fr] lg:gap-12">
+          <div class="reveal flex flex-col gap-4">
+            <div id="contactInfoList" class="grid gap-3"></div>
+            <div class="flex items-center gap-3 pt-1">
+              <span class="code-tag text-ink-soft">Siga a Liarth:</span>
+              <div id="socialLinks" class="flex gap-2"></div>
+            </div>
+          </div>
+
+          <div class="reveal" style="transition-delay:100ms">
+            <div class="card p-6 sm:p-8">
+              <div id="formSuccess" class="hidden flex min-h-[400px] flex-col items-center justify-center text-center">
+                <span class="grid h-14 w-14 place-items-center border-2 border-green text-green">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg>
+                </span>
+                <h3 class="mt-5 text-xl font-bold text-ink">Ordem de serviço enviada</h3>
+                <p class="mt-2 max-w-sm text-sm normal-case text-ink-soft">Sua solicitação foi encaminhada via WhatsApp. Responderemos em breve.</p>
+                <button type="button" onclick="resetForm()" class="btn btn-outline mt-6">Abrir Outra Solicitação</button>
+              </div>
+
+              <form id="contactForm" class="grid gap-5">
+                <div class="flex items-center justify-between code-tag text-ink-soft">
+                  <span>ORDEM DE SERVIÇO</span>
+                  <span id="formCodeStamp"></span>
+                </div>
+                <div class="hairline"></div>
+                <div class="grid gap-5 sm:grid-cols-2">
+                  <div class="flex flex-col">
+                    <label for="name" class="field-label">Nome completo</label>
+                    <input id="name" name="name" type="text" placeholder="Digite seu nome completo" required class="field-control" />
+                  </div>
+                  <div class="flex flex-col">
+                    <label for="email" class="field-label">E-mail</label>
+                    <input id="email" name="email" type="email" placeholder="seuemail@exemplo.com" required class="field-control" />
+                  </div>
+                </div>
+                <div class="grid gap-5 sm:grid-cols-2">
+                  <div class="flex flex-col">
+                    <label for="phone" class="field-label">Telefone / WhatsApp</label>
+                    <input id="phone" name="phone" type="tel" placeholder="(31) 9 0000-0000" class="field-control" />
+                  </div>
+                  <div class="flex flex-col">
+                    <label for="subject" class="field-label">Assunto</label>
+                    <select id="subject" name="subject" class="field-control appearance-none" required>
+                      <option value="" disabled selected>Selecione o assunto</option>
+                      <option>Coleta domiciliar</option>
+                      <option>Varrição e espaços públicos</option>
+                      <option>Capina, poda e roçada</option>
+                      <option>Informações institucionais</option>
+                      <option>Outros assuntos</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="flex flex-col">
+                  <label for="message" class="field-label">Descrição</label>
+                  <textarea id="message" name="message" placeholder="Descreva sua solicitação ou dúvida..." required class="field-control"></textarea>
+                </div>
+                <label class="flex items-start gap-3 text-sm normal-case text-ink-soft">
+                  <input type="checkbox" required class="mt-0.5 h-4 w-4" style="accent-color:rgb(var(--green))" />
+                  <span>Concordo com a política de privacidade.</span>
+                </label>
+                <button type="submit" class="btn btn-ink w-full">Enviar Solicitação</button>
+                <p class="text-center text-xs normal-case text-ink-soft">Atendimento de segunda a sábado.</p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ======== FOOTER ======== -->
+  <footer class="border-t-2 border-ink bg-ink">
+    <div class="container-app py-16 lg:py-20">
+      <div class="grid gap-12 lg:grid-cols-[1.4fr_repeat(3,1fr)]">
+        <div class="max-w-sm">
+          <div class="flex items-center gap-2.5">
+            <span class="grid h-10 w-10 place-items-center overflow-hidden border-2 border-paper/25 bg-paper">
+              <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlwM3zumuSqMMFu_0Bwhkk7zmCR0renfnHSUWSzzsFxbEMksbHAs1nyHsUgTWyhIFfnUIiH73DmtTKhdqKc6i1SUKzbHGoxfJk-CAjwuHbD6peLfzzd_fGHzH-4sKUhQCV_-AJs=s680-w680-h510-rw" alt="" width="40" height="40" class="h-full w-full object-cover" loading="lazy" />
+          </span>
+          <span class="font-display text-xl font-bold tracking-tight text-paper">LIARTH</span>
+          </div>
+          <p class="mt-4 text-sm leading-relaxed text-paper/55">Prestação de serviços públicos de limpeza urbana em Nova Lima - MG, desde 1999.</p>
+          <div id="footerContact" class="mt-6 space-y-2"></div>
+          <div id="footerSocial" class="mt-6 flex gap-2"></div>
+        </div>
+        <div id="footerColumns" class="contents"></div>
+      </div>
+
+      <hr class="my-10 border-paper/15" />
+
+      <div class="flex flex-col items-center justify-between gap-4 text-center sm:flex-row sm:text-left">
+        <p class="code-tag text-paper/35">© <span id="footerYear"></span> LIARTH LIMPEZA URBANA LTDA · CNPJ 14.808.488/0001-92</p>
+        <div class="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm text-paper/55">
+          <a href="#" class="transition-colors hover:text-paper">Termos de Uso</a>
+          <a href="#" class="transition-colors hover:text-paper">Política de Privacidade</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/553136943900" target="_blank" rel="noopener noreferrer" aria-label="Falar no WhatsApp" class="fixed bottom-5 left-5 z-50 grid h-14 w-14 place-items-center border-2 border-ink bg-green text-paper shadow-[0_14px_32px_-8px_rgba(0,0,0,0.35)] transition-transform hover:scale-105">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 11.5a8.5 8.5 0 0 1-12.5 7.5L3 21l2-5.5A8.5 8.5 0 1 1 21 11.5Z"/></svg>
+  </a>
+
+  <script>
+    var I = {};
+    function ri(n,p){ I[n]=p; }
+    function icn(n,s,sw){ return '<svg xmlns="http://www.w3.org/2000/svg" width="'+(s||22)+'" height="'+(s||22)+'" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="'+(sw||1.75)+'" stroke-linecap="round" stroke-linejoin="round" class="shrink-0">'+(I[n]||'')+'</svg>'; }
+
+    ri("truck",'<path d="M3 17h2"/><path d="M9 17H5V7a1 1 0 0 1 1-1h7v11h-2"/><path d="M14 10h4l3 3v4h-2"/><circle cx="7.5" cy="17.5" r="1.8"/><circle cx="17.5" cy="17.5" r="1.8"/>');
+    ri("broom",'<path d="m3 21 5-5"/><path d="M13 6 6 13a3 3 0 0 0 0 4.2A3 3 0 0 0 10.2 17l7-7"/><path d="M18 4c1.5 1.5 1 4-.5 5.5"/><path d="M15 3c1.7.4 3 2 3 3.8"/>');
+    ri("trees",'<path d="M10 10v.2A3 3 0 0 1 8.9 16H5a3 3 0 0 1-1-5.8V10a3 3 0 1 1 6 0Z"/><path d="M7 16v6"/><path d="M13 19v3"/><path d="M12 19h8.3a1 1 0 0 0 .7-1.7L18 14h.3a1 1 0 0 0 .7-1.7L16 9h.2a1 1 0 0 0 .8-1.7L13 3l-1.4 1.5"/>');
+    ri("scissors",'<circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4 8.12 15.88"/><path d="M14.47 14.48 20 20"/><path d="M8.12 8.12 12 12"/>');
+    ri("recycle",'<path d="M7 19H4.815a1.83 1.83 0 0 1-1.57-.881 1.785 1.785 0 0 1-.004-1.784L7.196 9.5"/><path d="M11 19h8.203a1.83 1.83 0 0 0 1.556-.89 1.784 1.784 0 0 0 0-1.775l-1.226-2.12"/><path d="m14 16-3 3 3 3"/><path d="M8.293 13.596 4.851 9.5l3.442-4.096"/><path d="M9 5.5 12 5.5"/><path d="m16.293 5.596 3.442 4.096-3.442 4.096"/>');
+    ri("check-circle",'<circle cx="12" cy="12" r="9"/><path d="m8.5 12 2.5 2.5 4.5-5"/>');
+    ri("x",'<path d="M18 6 6 18"/><path d="m6 6 12 12"/>');
+    ri("plus",'<path d="M12 5v14"/><path d="M5 12h14"/>');
+    ri("minus",'<path d="M5 12h14"/>');
+    ri("phone",'<path d="M5 4h3l2 5-2 1a12 12 0 0 0 5 5l1-2 5 2v3a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/>');
+    ri("mail",'<rect x="3" y="5" width="18" height="14" rx="1"/><path d="m3 7 9 6 9-6"/>');
+    ri("map-pin",'<path d="M12 21s7-6 7-11a7 7 0 1 0-14 0c0 5 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/>');
+    ri("clock",'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>');
+    ri("message-circle",'<path d="M21 11.5a8.5 8.5 0 0 1-12.5 7.5L3 21l2-5.5A8.5 8.5 0 1 1 21 11.5Z"/>');
+    ri("instagram",'<rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.1" fill="currentColor" stroke="none"/>');
+    ri("quote",'<path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1 1 1 0 0 0 1 1 4 4 0 0 0 4-4V5a2 2 0 0 0-2-2Z"/><path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1 1 1 0 0 0 1 1 4 4 0 0 0 4-4V5a2 2 0 0 0-2-2Z"/>');
+    ri("route",'<circle cx="6" cy="19" r="2"/><circle cx="18" cy="5" r="2"/><path d="M12 19H8.5a2.5 2.5 0 0 1 0-5h7a2.5 2.5 0 0 0 0-5H6"/>');
+    ri("shield",'<path d="M12 3 5 6v5c0 4.5 3 7.5 7 9 4-1.5 7-4.5 7-9V6l-7-3Z"/><path d="m9 12 2 2 4-4"/>');
+    ri("gauge",'<path d="M12 15 16.24 6.5"/><circle cx="12" cy="15" r="1.3" fill="currentColor" stroke="none"/><path d="M3.05 19a9 9 0 1 1 17.9 0Z"/>');
+    ri("leaf",'<path d="M11 20A7 7 0 0 1 4 13c0-6 6-9 15-9 0 9-3 15-9 16Z"/><path d="M4 20c4-2 8-6 11-11"/>');
+    ri("menu",'<path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h16"/>');
+
+    var site = {
+      nav: [
+        { label: "Início", href: "#inicio" },
+        { label: "Rotas", href: "#rotas" },
+        { label: "Serviços", href: "#servicos" },
+        { label: "Diferenciais", href: "#diferenciais" },
+        { label: "Contratos", href: "#contratos" },
+        { label: "Contato", href: "#contato" }
+      ],
+      contact: {
+        phone: "(31) 3694-3900", phoneHref: "tel:3136943900",
+        whatsapp: "(31) 3694-3900", whatsappHref: "https://wa.me/553136943900",
+        email: "liarth@liarth.com.br", emailHref: "mailto:liarth@liarth.com.br",
+        hours: "Seg a Sex: 07h–18h · Sáb: 08h–14h",
+        address: { line1: "MG-030, 1456 - Vila Nova Suíça", line2: "Nova Lima/MG", cep: "CEP 34012-580" }
+      },
+      social: [ { label: "Instagram", icon: "instagram", href: "https://www.instagram.com/liarth.limpezaurbana/" } ],
+      schedule: [
+        { bairro: "Vila Nova Suíça", servico: "Coleta domiciliar", dias: "Seg · Qua · Sex", horario: "06:00" },
+        { bairro: "Centro", servico: "Varrição + coleta", dias: "Diário", horario: "05:30" },
+        { bairro: "Cristina", servico: "Coleta domiciliar", dias: "Ter · Qui · Sáb", horario: "06:00" },
+        { bairro: "Retiro das Pedras", servico: "Coleta domiciliar", dias: "Seg · Qua · Sex", horario: "07:00" },
+        { bairro: "Jardim Canadá", servico: "Varrição + coleta", dias: "Diário", horario: "06:00" },
+        { bairro: "Vale do Sereno", servico: "Coleta domiciliar", dias: "Ter · Qui · Sáb", horario: "07:30" },
+        { bairro: "Estância", servico: "Capina e roçada", dias: "Quinzenal", horario: "06:00" }
+      ],
+      services: [
+        { icon:"truck", code:"OS-01", title:"Coleta Domiciliar", description:"Recolhimento periódico de resíduos residenciais, seguindo rota fixa por bairro e horário publicado no painel de rotas." },
+        { icon:"broom", code:"OS-02", title:"Varrição de Vias e Logradouros", description:"Varrição manual e mecanizada de ruas, calçadas e sarjetas, com remoção de folhas e resíduos soltos." },
+        { icon:"trees", code:"OS-03", title:"Limpeza de Praças e Parques", description:"Manutenção contínua de áreas verdes e espaços de convivência, mantendo-os limpos e seguros para uso público." },
+        { icon:"scissors", code:"OS-04", title:"Capina e Roçada", description:"Controle de mato e vegetação em terrenos públicos, canteiros e margens de via, conforme cronograma sazonal." },
+        { icon:"leaf", code:"OS-05", title:"Poda e Manejo de Árvores", description:"Poda técnica de árvores em espaços públicos, com foco em segurança viária e preservação da arborização urbana." },
+        { icon:"recycle", code:"OS-06", title:"Destinação Final de Resíduos", description:"Triagem, transporte e encaminhamento de resíduos não perigosos a locais licenciados, conforme CNAE 3811-4/00." }
+      ],
+      differentials: [
+        { icon:"shield", title:"26 anos de operação pública", description:"Atuação contínua desde 1999, com histórico auditável de cumprimento de rotas e contratos." },
+        { icon:"route", title:"Rota fixa, horário publicado", description:"Cada bairro sabe exatamente o dia e o horário da sua coleta — sem surpresas, sem falhas de comunicação." },
+        { icon:"recycle", title:"Destinação correta, sempre", description:"100% dos resíduos coletados seguem para destinação licenciada, com registro de manifesto de transporte." },
+        { icon:"check-circle", title:"Nota 4,8 nas avaliações", description:"Reconhecimento direto de moradores e comércios atendidos, medido nas avaliações públicas do Google." },
+        { icon:"clock", title:"Atendimento seis dias por semana", description:"Operação de segunda a sábado, com equipe de atendimento disponível para ajustes e solicitações." },
+        { icon:"gauge", title:"Equipe e frota dimensionadas", description:"Rotas planejadas por volume real de resíduos, evitando atraso na coleta em dias de pico." }
+      ],
+      stats: [
+        { value: 1999, suffix: "", label: "Início da operação" },
+        { value: 4.8, suffix: "/5", label: "Avaliação no Google" },
+        { value: 100, suffix: "%", label: "Destinação correta" },
+        { value: 6, suffix: " dias", label: "De operação por semana" }
+      ],
+      dayRoute: [
+        { time:"05:30", title:"Saída da garagem", description:"Equipes e veículos deixam a base já com a rota do dia carregada e conferida." },
+        { time:"06:00", title:"Início da coleta e varrição", description:"Execução simultânea das rotas ativas do dia, por bairro e horário publicado." },
+        { time:"12:00", title:"Retorno e triagem", description:"Volta à base para conferência de carga e separação prévia dos resíduos coletados." },
+        { time:"14:00", title:"Destinação final", description:"Transporte e encaminhamento do material a destino licenciado, com manifesto emitido." }
+      ],
+      testimonials: [
+        { quote:"A coleta na Vila Nova Suíça nunca atrasa. A gente já sabe: terça, quinta e sábado de manhã, sem falha.", name:"Maria Silva", role:"Moradora", company:"Nova Lima" },
+        { quote:"Depois que a Liarth assumiu a varrição do Centro, as calçadas do comércio ficaram outra coisa. Notamos rápido.", name:"Carlos Oliveira", role:"Comerciante", company:"Nova Lima" },
+        { quote:"Contratamos a capina e roçada para os terrenos da associação. Serviço no prazo combinado, sem retrabalho.", name:"Associação Comercial", role:"Parceiro institucional", company:"Nova Lima" }
+      ],
+      pricing: [
+        { code:"MOD-01", name:"Coleta Domiciliar", period:"Contrato público", description:"Recolhimento periódico de resíduos residenciais por rota fixa.", features:["Rota e horário publicados","Frequência definida em contrato","Destinação licenciada"], featured:false },
+        { code:"MOD-02", name:"Varrição e Zeladoria", period:"Contrato público", description:"Varrição de vias, praças e limpeza contínua de espaços públicos.", features:["Varrição manual e mecanizada","Limpeza de praças e parques","Equipe fixa por região"], featured:true },
+        { code:"MOD-03", name:"Gestão Ambiental de Resíduos", period:"Contrato público", description:"Capina, poda e destinação final de resíduos não perigosos.", features:["Capina e roçada programada","Poda técnica de árvores","Manifesto de transporte emitido"], featured:false }
+      ],
+      faq: [
+        { q:"Quais serviços a Liarth presta?", a:"Coleta domiciliar, varrição de vias e logradouros, limpeza de praças e parques, capina e roçada, poda de árvores e destinação final de resíduos não perigosos." },
+        { q:"Desde quando a empresa opera?", a:"A Liarth presta serviços públicos de limpeza urbana em Nova Lima desde 1999." },
+        { q:"Como sei o horário de coleta do meu bairro?", a:"Consulte o painel de rotas nesta página ou fale com nosso atendimento informando o nome do bairro." },
+        { q:"Onde fica a sede da Liarth?", a:"MG-030, 1456 - Vila Nova Suíça, Nova Lima - MG, CEP 34012-580." },
+        { q:"Como entro em contato?", a:"Pelo telefone (31) 3694-3900, e-mail liarth@liarth.com.br ou pelo formulário de ordem de serviço nesta página." },
+        { q:"Qual o horário de atendimento?", a:"Segunda a sexta das 07h às 18h, e aos sábados das 08h às 14h." }
+      ],
+      footer: {
+        columns: [
+          { title:"Navegação", links:[{label:"Início",href:"#inicio"},{label:"Rotas",href:"#rotas"},{label:"Serviços",href:"#servicos"},{label:"Contato",href:"#contato"}] },
+          { title:"Serviços", links:[{label:"Coleta domiciliar",href:"#servicos"},{label:"Varrição de ruas",href:"#servicos"},{label:"Capina e roçada",href:"#servicos"},{label:"Destinação correta",href:"#servicos"}] },
+          { title:"Institucional", links:[{label:"Diferenciais",href:"#diferenciais"},{label:"Modalidades",href:"#contratos"},{label:"Perguntas frequentes",href:"#faq"},{label:"Contato",href:"#contato"}] }
+        ]
+      }
+    };
+
+    var revealObserver = new IntersectionObserver(function(entries){
+      for (var i=0;i<entries.length;i++){
+        if (entries[i].isIntersecting){
+          entries[i].target.classList.add("is-visible");
+          if (entries[i].target.classList.contains("stats-reveal")) animateStats();
+          revealObserver.unobserve(entries[i].target);
+        }
+      }
+    }, { threshold: 0.1, rootMargin: "0px 0px -6% 0px" });
+    function observeReveals(){ document.querySelectorAll(".reveal").forEach(function(el){ revealObserver.observe(el); }); }
+
+    /* ---------- smooth scroll with offset ---------- */
+    function initSmoothScroll(){
+      var header = document.getElementById("siteHeader");
+      document.addEventListener("click", function(e){
+        var link = e.target.closest("a[href^='#']");
+        if (!link) return;
+        var target = document.querySelector(link.getAttribute("href"));
+        if (!target) return;
+        e.preventDefault();
+        var offset = header.offsetHeight + 8;
+        var top = target.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top: top, behavior: "smooth" });
+      });
+    }
+
+    /* ---------- parallax ---------- */
+    function initParallax(){
+      var prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (prefersReduced) return;
+      var layers = document.querySelectorAll(".parallax:not(#heroParallax) img");
+      if (!layers.length) return;
+      var ticking = false;
+      function update(){
+        if (!ticking) {
+          requestAnimationFrame(function(){
+            for (var i=0;i<layers.length;i++){
+              var img = layers[i];
+              var rect = img.parentElement.getBoundingClientRect();
+              if (rect.bottom > 0 && rect.top < window.innerHeight) {
+                var speed = 0.3;
+                var offset = rect.top * speed;
+                img.style.transform = "translate3d(0," + offset + "px,0)";
+              }
+            }
+            ticking = false;
+          });
+          ticking = true;
+        }
+      }
+      window.addEventListener("scroll", update, { passive: true });
+      update();
+    }
+
+    /* ---------- 3D card tilt ---------- */
+    function initCardTilt(){
+      var cards = document.querySelectorAll(".card-tilt");
+      cards.forEach(function(card){
+        card.addEventListener("mousemove", function(e){
+          var rect = card.getBoundingClientRect();
+          var x = e.clientX - rect.left;
+          var y = e.clientY - rect.top;
+          var centerX = rect.width / 2;
+          var centerY = rect.height / 2;
+          var rotateX = ((y - centerY) / centerY) * -6;
+          var rotateY = ((x - centerX) / centerX) * 6;
+          card.style.transform = "perspective(800px) rotateX("+rotateX+"deg) rotateY("+rotateY+"deg)";
+        });
+        card.addEventListener("mouseleave", function(){
+          card.style.transform = "perspective(800px) rotateX(0) rotateY(0)";
+        });
+      });
+    }
+
+    /* ---------- hero mouse parallax ---------- */
+    function initHeroMouseParallax(){
+      var hero = document.getElementById("inicio");
+      if (!hero) return;
+      hero.addEventListener("mousemove", function(e){
+        var rect = hero.getBoundingClientRect();
+        var x = (e.clientX - rect.left) / rect.width - 0.5;
+        var y = (e.clientY - rect.top) / rect.height - 0.5;
+        var imgs = hero.querySelectorAll(".parallax img");
+        imgs.forEach(function(img){
+          img.style.transform = "translate3d("+(x*-30)+"px,"+(y*-30)+"px,0)";
+        });
+      });
+    }
+
+    /* ---------- horizontal scroll ---------- */
+    function initHScroll(){
+      var wraps = document.querySelectorAll(".hscroll-wrap");
+      if (!wraps.length) return;
+      function updateHScroll(){
+        wraps.forEach(function(wrap){
+          var inner = wrap.querySelector(".hscroll-inner");
+          if (!inner) return;
+          var rect = wrap.getBoundingClientRect();
+          var progress = (window.innerHeight - rect.top) / (window.innerHeight + rect.height + 600);
+          progress = Math.max(0, Math.min(1, progress));
+          var eased = progress < 0.5 ? 2 * progress * progress : 1 - Math.pow(-2 * progress + 2, 2) / 2;
+          var maxScroll = inner.scrollWidth - wrap.clientWidth;
+          if (maxScroll > 0) inner.style.transform = "translateX(-"+(eased * maxScroll)+"px)";
+        });
+      }
+      window.addEventListener("scroll", updateHScroll, { passive: true });
+      updateHScroll();
+    }
+
+    /* ---------- active nav link ---------- */
+    function initActiveNav(){
+      var links = document.querySelectorAll("#navDesktop a");
+      if (!links.length) return;
+      var sections = [];
+      for (var i=0;i<links.length;i++){
+        var href = links[i].getAttribute("href");
+        if (href && href[0]==="#") sections.push(document.getElementById(href.slice(1)));
+      }
+      function update(){
+        var current = "";
+        for (var i=0;i<sections.length;i++){
+          if (sections[i] && sections[i].getBoundingClientRect().top <= 150) current = sections[i].id;
+        }
+        for (var i=0;i<links.length;i++){
+          var isCurrent = links[i].getAttribute("href") === "#" + current;
+          links[i].className = "code-tag px-3.5 py-2 transition-colors " + (isCurrent ? "text-ink font-bold" : "text-ink-soft hover:text-ink");
+        }
+      }
+      window.addEventListener("scroll", update, { passive: true });
+      update();
+    }
+
+    var menuOpen = false;
+    function toggleMobileMenu(){
+      menuOpen = !menuOpen;
+      var menu = document.getElementById("mobileMenu");
+      var toggle = document.getElementById("menuToggle");
+      var icon = document.getElementById("menuIcon");
+      menu.className = "overflow-hidden border-b-2 border-ink bg-paper transition-[max-height,opacity] duration-500 ease-out lg:hidden " + (menuOpen ? "max-h-[32rem] opacity-100" : "max-h-0 opacity-0");
+      toggle.setAttribute("aria-expanded", menuOpen);
+      icon.innerHTML = menuOpen ? icn("x",19,2.4) : icn("menu",19,2.4);
+      document.body.style.overflow = menuOpen ? "hidden" : "";
+    }
+
+    function renderNav(){
+      var desktop = document.getElementById("navDesktop");
+      var mobile = document.getElementById("mobileNavLinks");
+      var dh = "", mh = "";
+      for (var i=0;i<site.nav.length;i++){
+        var item = site.nav[i];
+        dh += '<a href="'+item.href+'" class="code-tag px-3.5 py-2 text-ink-soft transition-colors hover:text-ink">'+item.label+'</a>';
+        mh += '<a href="'+item.href+'" onclick="toggleMobileMenu()" class="border-b border-ink/15 px-2 py-3 text-base font-medium text-ink">'+item.label+'</a>';
+      }
+      desktop.innerHTML = dh;
+      mh += '<a href="#contato" onclick="toggleMobileMenu()" class="btn btn-green mt-3 w-full">Solicitar Atendimento</a>';
+      mobile.innerHTML = mh;
+    }
+
+    function renderSchedule(){
+      var board = document.getElementById("scheduleBoard");
+      var html = "";
+      for (var i=0;i<site.schedule.length;i++){
+        var r = site.schedule[i];
+        var dist = Math.max(100, Math.min(190, r.bairro.length * 11));
+        html += '<div class="relative grid grid-cols-4 items-center gap-2 border-b border-ink/10 px-5 py-4 last:border-b-0 sm:px-7 group cursor-default transition-colors hover:bg-paper" style="--td:'+dist+'px">'
+          + '<div class="relative font-mono text-[0.8rem] text-ink sm:text-sm">'
+          + '<span class="schedule-truck hidden sm:inline">'+icn("truck",14)+'</span>'
+          + '<span class="relative z-10 ml-0 group-hover:ml-8 transition-all duration-500">'+r.bairro+'</span>'
+          + '</div>'
+          + '<div class="hidden font-mono text-xs text-ink-soft sm:block relative z-10">'+r.servico+'</div>'
+          + '<div class="font-mono text-[0.72rem] text-ink-soft sm:text-xs">'+r.dias+'</div>'
+          + '<div class="text-right font-mono text-sm font-bold sm:text-base" style="color:rgb(var(--blue))">'+r.horario+'</div>'
+          + '</div>';
+      }
+      board.innerHTML = html;
+    }
+
+    function renderServices(){
+      var grid = document.getElementById("serviceGrid");
+      var html = "";
+      for (var i=0;i<site.services.length;i++){
+        var s = site.services[i];
+        html += '<div class="reveal card card-tilt flex flex-col p-7" style="transition-delay:'+(i*60)+'ms">'
+          + '<div class="flex items-center justify-between">'
+          + '<span class="grid h-12 w-12 shrink-0 place-items-center border-2 border-ink text-green">'+icn(s.icon,20)+'</span>'
+          + '<span class="code-tag text-ink-soft">'+s.code+'</span>'
+          + '</div>'
+          + '<h3 class="mt-4 font-display text-xl font-bold text-ink">'+s.title+'</h3>'
+          + '<p class="mt-2 text-sm leading-relaxed text-ink-soft flex-1">'+s.description+'</p>'
+          + '</div>';
+      }
+      grid.innerHTML = html;
+    }
+
+    function renderDifferentials(){
+      var list = document.getElementById("diffList");
+      if (!list) return;
+      var html = "";
+      for (var i=0;i<site.differentials.length;i++){
+        var d = site.differentials[i];
+        html += '<div class="reveal flex items-start gap-5 py-6 border-t border-ink/10 first:border-t-0" style="transition-delay:'+(i*50)+'ms">'
+          + '<span class="grid h-11 w-11 shrink-0 place-items-center border-2 border-ink text-green mt-0.5">'+icn(d.icon,18)+'</span>'
+          + '<div><h3 class="font-display text-base font-bold text-ink">'+d.title+'</h3><p class="mt-1 text-sm leading-relaxed text-ink-soft">'+d.description+'</p></div>'
+          + '</div>';
+      }
+      list.innerHTML = html;
+    }
+
+    function renderStats(){
+      var grid = document.getElementById("statsGrid");
+      var html = "";
+      for (var i=0;i<site.stats.length;i++){
+        var s = site.stats[i];
+        html += '<div class="reveal border border-paper/20 px-4 py-8 text-center text-paper" style="transition-delay:'+(i*70)+'ms">'
+          + '<div class="odometer text-3xl font-bold sm:text-4xl"><span class="stat-num" data-target="'+s.value+'">0</span>'+s.suffix+'</div>'
+          + '<div class="mt-2 code-tag text-paper/55">'+s.label+'</div>'
+          + '</div>';
+      }
+      grid.innerHTML = html;
+    }
+    function animateStats(){
+      document.querySelectorAll(".stat-num").forEach(function(el){
+        var target = parseFloat(el.getAttribute("data-target")) || 0;
+        var isDecimal = target % 1 !== 0;
+        var start = performance.now();
+        (function animate(t){
+          var p = Math.min((t-start)/1600,1);
+          var eased = 1 - Math.pow(1-p,3);
+          el.textContent = isDecimal ? (target*eased).toFixed(1) : Math.round(target*eased);
+          if (p<1) requestAnimationFrame(animate);
+        })(performance.now());
+      });
+    }
+
+    function renderDayRoute(){
+      var wrap = document.getElementById("dayRouteTimeline");
+      if (!wrap || !site.dayRoute.length) return;
+      var html = '<div class="hscroll-wrap"><div class="hscroll-inner">';
+      for (var i=0;i<site.dayRoute.length;i++){
+        var p = site.dayRoute[i];
+        html += '<div class="reveal card card-tilt flex flex-col p-7 min-w-[260px] sm:min-w-[300px]" style="transition-delay:'+(i*80)+'ms">'
+          + '<span class="grid h-10 w-10 place-items-center border-2 border-ink text-blue">'+icn("clock",16)+'</span>'
+          + '<div class="flex items-baseline gap-3 mt-4"><span class="font-mono text-sm font-bold text-blue">'+p.time+'</span></div>'
+          + '<h3 class="font-display text-lg font-bold text-ink mt-1">'+p.title+'</h3>'
+          + '<p class="mt-2 text-sm leading-relaxed text-ink-soft flex-1">'+p.description+'</p>'
+          + '</div>';
+      }
+      html += '</div></div>';
+      wrap.innerHTML = html;
+    }
+
+    function hash(str){ var h=0; for (var i=0;i<str.length;i++){ h=(h<<5)-h+str.charCodeAt(i); h|=0; } return Math.abs(h); }
+    function getInitials(name){
+      var clean = name.replace(/[[\]]/g,"").trim();
+      if (!clean) return "•";
+      var words = clean.split(/\s+/).filter(Boolean);
+      if (words.length===1) return words[0].slice(0,2).toUpperCase();
+      return (words[0][0]+words[words.length-1][0]).toUpperCase();
+    }
+    function avatar(name,size){
+      size = size||44;
+      return '<span class="inline-grid shrink-0 place-items-center font-display font-bold" style="width:'+size+'px;height:'+size+'px;font-size:'+(size*0.36)+'px;border:2px solid rgb(var(--ink));background:rgb(var(--paper-2));color:rgb(var(--ink))" aria-hidden="true">'+getInitials(name)+'</span>';
+    }
+
+    function renderTestimonials(){
+      var grid = document.getElementById("testimonialGrid");
+      if (!grid) return;
+      var html = "";
+      for (var i=0;i<site.testimonials.length;i++){
+        var t = site.testimonials[i];
+        html += '<div class="reveal card flex h-full flex-col p-7" style="transition-delay:'+(i*70)+'ms">'
+          + '<span class="text-green/30">'+icn("quote",24)+'</span>'
+          + '<p class="mt-4 flex-1 text-base leading-relaxed text-ink">"'+t.quote+'"</p>'
+          + '<div class="mt-6 flex items-center gap-3 border-t border-ink/10 pt-5">'
+          + avatar(t.name,40)
+          + '<div><div class="text-sm font-semibold text-ink">'+t.name+'</div>'
+          + '<div class="code-tag text-ink-soft">'+t.role+' · '+t.company+'</div></div>'
+          + '</div></div>';
+      }
+      grid.innerHTML = html;
+    }
+
+    function renderPricing(){
+      var grid = document.getElementById("pricingGrid");
+      var html = "";
+      for (var i=0;i<site.pricing.length;i++){
+        var p = site.pricing[i];
+        var feat = "";
+        for (var j=0;j<p.features.length;j++){ feat += '<li class="flex items-start gap-2.5 text-sm normal-case text-ink">'+icn("check-circle",16)+'<span>'+p.features[j]+'</span></li>'; }
+        html += '<div class="reveal h-full" style="transition-delay:'+(i*80)+'ms">'
+          + '<div class="card h-full flex flex-col p-7 relative'+(p.featured?' ring-2 ring-green ring-offset-2 ring-offset-paper-2':'')+'">'
+          + (p.featured ? '<span class="badge badge-green absolute -top-3.5 left-1/2 -translate-x-1/2 text-[0.65rem] whitespace-nowrap">MAIS CONTRATADO</span>' : '')
+          + '<div><div class="flex items-center justify-between"><h3 class="font-display text-lg font-bold text-ink">'+p.name+'</h3><span class="code-tag text-ink-soft">'+p.code+'</span></div>'
+          + '<p class="mt-2 text-sm leading-relaxed text-ink-soft">'+p.description+'</p>'
+          + '<p class="mt-3 code-tag text-blue">'+p.period+'</p></div>'
+          + '<div class="mt-6 flex-1"><ul class="space-y-2.5">'
+          + feat
+          + '</ul></div>'
+          + '<a href="#contato" class="btn '+(p.featured?"btn-green":"btn-outline")+' mt-6 w-full">Solicitar Proposta</a>'
+          + '</div></div>';
+      }
+      grid.innerHTML = html;
+    }
+
+    function renderFAQ(){
+      var list = document.getElementById("faqList");
+      var html = "";
+      for (var i=0;i<site.faq.length;i++){
+        var f = site.faq[i];
+        html += '<div class="reveal card" style="transition-delay:'+(i*40)+'ms">'
+          + '<button type="button" class="faq-q flex w-full items-center justify-between gap-4 p-5 text-left sm:p-6" data-index="'+i+'">'
+          + '<span class="text-base font-medium normal-case text-ink sm:text-[1.02rem]">'+f.q+'</span>'
+          + '<span class="faq-icon grid h-8 w-8 shrink-0 place-items-center text-ink-soft transition-all">'+icn("plus",15,2.4)+'</span>'
+          + '</button>'
+          + '<div class="faq-answer grid grid-rows-[0fr] opacity-0 transition-all duration-300 ease-out">'
+          + '<div class="overflow-hidden"><p class="px-5 pb-5 -mt-1 normal-case leading-relaxed text-ink-soft sm:px-6 sm:pb-6">'+f.a+'</p></div>'
+          + '</div></div>';
+      }
+      list.innerHTML = html;
+
+      document.querySelectorAll(".faq-q").forEach(function(btn){
+        btn.addEventListener("click", function(){
+          var item = this.closest("div.reveal");
+          var answer = item.querySelector(".faq-answer");
+          var icon = item.querySelector(".faq-icon");
+          var isOpen = answer.classList.contains("grid-rows-[1fr]");
+
+          document.querySelectorAll(".faq-answer").forEach(function(a){ a.className = "faq-answer grid grid-rows-[0fr] opacity-0 transition-all duration-300 ease-out"; });
+          document.querySelectorAll(".faq-icon").forEach(function(ic){ ic.innerHTML = icn("plus",15,2.4); ic.style.background=""; ic.style.color="rgb(var(--ink-soft))"; });
+
+          if (!isOpen){
+            answer.className = "faq-answer grid grid-rows-[1fr] opacity-100 transition-all duration-300 ease-out";
+            icon.innerHTML = icn("minus",15,2.4);
+            icon.style.background = "rgb(var(--ink))";
+            icon.style.color = "rgb(var(--paper))";
+          }
+        });
+      });
+    }
+
+    function renderContactInfo(){
+      var list = document.getElementById("contactInfoList");
+      var c = site.contact;
+      var html = '<div class="card flex items-start gap-4 p-5">'
+        + '<span class="grid h-11 w-11 shrink-0 place-items-center border-2 border-ink text-green">'+icn("map-pin",20)+'</span>'
+        + '<div><p class="text-sm font-semibold normal-case text-ink">Endereço</p>'
+        + '<p class="mt-0.5 text-sm normal-case text-ink-soft">'+c.address.line1+'</p>'
+        + '<p class="text-sm normal-case text-ink-soft">'+c.address.line2+' · '+c.address.cep+'</p></div></div>';
+
+      var items = [
+        { icon:"phone", label:"Telefone", value:c.phone, href:c.phoneHref },
+        { icon:"mail", label:"E-mail", value:c.email, href:c.emailHref },
+        { icon:"message-circle", label:"WhatsApp", value:c.whatsapp, href:c.whatsappHref }
+      ];
+      for (var i=0;i<items.length;i++){
+        var it = items[i];
+        html += '<a href="'+it.href+'" class="card flex items-center gap-4 p-5">'
+          + '<span class="grid h-11 w-11 shrink-0 place-items-center border-2 border-ink text-green">'+icn(it.icon,19)+'</span>'
+          + '<div><p class="text-sm font-semibold normal-case text-ink">'+it.label+'</p><p class="mt-0.5 text-sm normal-case text-ink-soft">'+it.value+'</p></div></a>';
+      }
+      html += '<div class="card flex items-center gap-4 p-5">'
+        + '<span class="grid h-11 w-11 shrink-0 place-items-center border-2 border-ink text-blue">'+icn("clock",20)+'</span>'
+        + '<div><p class="text-sm font-semibold normal-case text-ink">Horário de atendimento</p><p class="mt-0.5 text-sm normal-case text-ink-soft">'+c.hours+'</p></div></div>';
+
+      list.innerHTML = html;
+    }
+
+    function renderSocialLinks(){
+      var links = document.getElementById("socialLinks");
+      var html = "";
+      for (var i=0;i<site.social.length;i++){
+        var s = site.social[i];
+        html += '<a href="'+s.href+'" aria-label="'+s.label+'" class="grid h-9 w-9 place-items-center border-2 border-ink text-ink-soft transition-colors hover:bg-ink hover:text-paper">'+icn(s.icon,16)+'</a>';
+      }
+      links.innerHTML = html;
+    }
+
+    function renderFooter(){
+      var c = site.contact;
+      var ch = '<a href="'+c.phoneHref+'" class="flex items-center gap-2.5 text-sm normal-case text-paper/60 transition-colors hover:text-paper">'+icn("phone",15)+c.phone+'</a>'
+        + '<a href="'+c.emailHref+'" class="flex items-center gap-2.5 text-sm normal-case text-paper/60 transition-colors hover:text-paper">'+icn("mail",15)+c.email+'</a>'
+        + '<p class="flex items-start gap-2.5 text-sm normal-case text-paper/60">'+icn("map-pin",15)+'<span>'+c.address.line1+'<br>'+c.address.line2+'</span></p>';
+      document.getElementById("footerContact").innerHTML = ch;
+
+      var sh = "";
+      for (var i=0;i<site.social.length;i++){
+        var s = site.social[i];
+        sh += '<a href="'+s.href+'" aria-label="'+s.label+'" class="grid h-9 w-9 place-items-center border-2 border-paper/25 text-paper/60 transition-colors hover:bg-paper hover:text-ink">'+icn(s.icon,16)+'</a>';
+      }
+      document.getElementById("footerSocial").innerHTML = sh;
+
+      var colsHtml = document.getElementById("footerColumns");
+      var colHtml = "";
+      for (var i=0;i<site.footer.columns.length;i++){
+        var col = site.footer.columns[i];
+        colHtml += '<div><h3 class="code-tag text-paper/40">'+col.title+'</h3><ul class="mt-4 space-y-3">';
+        for (var j=0;j<col.links.length;j++){ colHtml += '<li><a href="'+col.links[j].href+'" class="text-sm normal-case text-paper/70 transition-colors hover:text-paper">'+col.links[j].label+'</a></li>'; }
+        colHtml += '</ul></div>';
+      }
+      colsHtml.innerHTML = colHtml;
+      document.getElementById("footerYear").textContent = new Date().getFullYear();
+    }
+
+    function handleFormSubmit(e){
+      e.preventDefault();
+      var fd = new FormData(e.currentTarget);
+      var name = fd.get("name")||"", phone = fd.get("phone")||"", subject = fd.get("subject")||"", msg = fd.get("message")||"";
+      var text = "Ol\u00E1! Gostaria de abrir uma ordem de servi\u00E7o.\n\n"
+        + "\u2022 Nome: "+name+"\n\u2022 Telefone: "+phone+"\n\u2022 Assunto: "+subject+"\n\u2022 Mensagem: "+msg;
+      window.open(site.contact.whatsappHref+"?text="+encodeURIComponent(text), "_blank", "noopener,noreferrer");
+      document.getElementById("contactForm").classList.add("hidden");
+      document.getElementById("formSuccess").classList.remove("hidden");
+    }
+    function resetForm(){
+      document.getElementById("contactForm").reset();
+      document.getElementById("contactForm").classList.remove("hidden");
+      document.getElementById("formSuccess").classList.add("hidden");
+    }
+
+    (function init(){
+      renderNav();
+      renderSchedule();
+      renderServices();
+      renderDifferentials();
+      renderStats();
+      renderDayRoute();
+      renderTestimonials();
+      renderPricing();
+      renderFAQ();
+      renderContactInfo();
+      renderSocialLinks();
+      renderFooter();
+      document.getElementById("formCodeStamp").textContent = "#"+Math.floor(1000+Math.random()*9000);
+      observeReveals();
+      initSmoothScroll();
+      initActiveNav();
+      initParallax();
+      initCardTilt();
+      initHeroMouseParallax();
+      initHScroll();
+      document.getElementById("contactForm").addEventListener("submit", handleFormSubmit);
+    })();
+  </script>
+</body>
+</html>
