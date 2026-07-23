@@ -20,7 +20,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;0,800;1,700;1,800&display=swap" rel="stylesheet" />
 
   <script type="application/ld+json">
     {
@@ -95,6 +95,7 @@
     h1 { font-weight: 800; }
     p { text-wrap: pretty; }
     .font-display { font-family: var(--font-sans); }
+    .font-serif { font-family: "Playfair Display", Georgia, serif; }
 
     .container-app { width: 100%; margin-inline: auto; max-width: 76rem; padding-inline: clamp(1.25rem, 5vw, 2rem); }
 
@@ -160,9 +161,7 @@
     #heroParallax {
       animation: kenBurns 20s ease-in-out infinite alternate;
     }
-    #heroParallax img {
-      transition: transform 0.1s ease-out;
-    }
+
     @keyframes kenBurns {
       0% { transform: scale(1) translate(0,0); }
       100% { transform: scale(1.08) translate(-1%,-1%); }
@@ -231,8 +230,8 @@
     <div id="headerInner" class="border-b-2 border-ink/10 bg-paper/95 backdrop-blur-md">
       <div class="container-app flex h-16 items-center justify-between gap-4 lg:h-[4.25rem]">
         <a href="#inicio" aria-label="Liarth Limpeza Urbana" class="flex shrink-0 items-center gap-2.5">
-          <span class="grid h-10 w-10 place-items-center overflow-hidden border-2 border-ink bg-paper">
-            <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlwM3zumuSqMMFu_0Bwhkk7zmCR0renfnHSUWSzzsFxbEMksbHAs1nyHsUgTWyhIFfnUIiH73DmtTKhdqKc6i1SUKzbHGoxfJk-CAjwuHbD6peLfzzd_fGHzH-4sKUhQCV_-AJs=s680-w680-h510-rw" alt="" width="40" height="40" class="h-full w-full object-cover" loading="lazy" />
+          <span class="grid h-10 w-10 place-items-center overflow-hidden bg-paper">
+            <img src="image.png" alt="" width="40" height="40" class="h-full w-full object-cover" loading="lazy" />
           </span>
           <span class="hidden flex-col leading-none sm:flex">
             <span class="font-display text-xl font-bold tracking-tight text-ink">LIARTH</span>
@@ -534,8 +533,8 @@
       <div class="grid gap-12 lg:grid-cols-[1.4fr_repeat(3,1fr)]">
         <div class="max-w-sm">
           <div class="flex items-center gap-2.5">
-            <span class="grid h-10 w-10 place-items-center overflow-hidden border-2 border-paper/25 bg-paper">
-              <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlwM3zumuSqMMFu_0Bwhkk7zmCR0renfnHSUWSzzsFxbEMksbHAs1nyHsUgTWyhIFfnUIiH73DmtTKhdqKc6i1SUKzbHGoxfJk-CAjwuHbD6peLfzzd_fGHzH-4sKUhQCV_-AJs=s680-w680-h510-rw" alt="" width="40" height="40" class="h-full w-full object-cover" loading="lazy" />
+<span class="grid h-10 w-10 place-items-center overflow-hidden">
+            <img src="image.png" alt="" width="40" height="40" class="h-full w-full object-contain" loading="lazy" />
           </span>
           <span class="font-display text-xl font-bold tracking-tight text-paper">LIARTH</span>
           </div>
@@ -550,11 +549,10 @@
 
       <div class="flex flex-col items-center justify-between gap-4 text-center sm:flex-row sm:text-left">
         <p class="code-tag text-paper/35">© <span id="footerYear"></span> LIARTH LIMPEZA URBANA LTDA · CNPJ 14.808.488/0001-92</p>
-        <div class="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm text-paper/55">
-          <a href="#" class="transition-colors hover:text-paper">Termos de Uso</a>
-          <a href="#" class="transition-colors hover:text-paper">Política de Privacidade</a>
-        </div>
       </div>
+      <p class="mt-4 text-center text-xs text-paper/45 sm:mt-6">
+        Uma experiência digital por <a href="https://marcoumweb.com" target="_blank" rel="noopener noreferrer" class="font-serif italic transition-colors hover:text-red-400"><span class="text-paper">Marco</span> <span class="text-red-500">Um</span></a>
+      </p>
     </div>
   </footer>
 
@@ -700,7 +698,7 @@
     function initParallax(){
       var prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
       if (prefersReduced) return;
-      var layers = document.querySelectorAll(".parallax:not(#heroParallax) img");
+      var layers = document.querySelectorAll(".parallax img");
       if (!layers.length) return;
       var ticking = false;
       function update(){
@@ -744,20 +742,7 @@
       });
     }
 
-    /* ---------- hero mouse parallax ---------- */
-    function initHeroMouseParallax(){
-      var hero = document.getElementById("inicio");
-      if (!hero) return;
-      hero.addEventListener("mousemove", function(e){
-        var rect = hero.getBoundingClientRect();
-        var x = (e.clientX - rect.left) / rect.width - 0.5;
-        var y = (e.clientY - rect.top) / rect.height - 0.5;
-        var imgs = hero.querySelectorAll(".parallax img");
-        imgs.forEach(function(img){
-          img.style.transform = "translate3d("+(x*-30)+"px,"+(y*-30)+"px,0)";
-        });
-      });
-    }
+
 
     /* ---------- horizontal scroll ---------- */
     function initHScroll(){
@@ -1108,7 +1093,7 @@
       initActiveNav();
       initParallax();
       initCardTilt();
-      initHeroMouseParallax();
+
       initHScroll();
       document.getElementById("contactForm").addEventListener("submit", handleFormSubmit);
     })();
